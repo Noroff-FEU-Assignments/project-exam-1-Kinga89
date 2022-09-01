@@ -25,7 +25,6 @@ header {
   width: 100%;
   z-index: 100;
   background-color: white;
-  background-color: rgb(185, 93, 93);
   box-shadow: 0 0 3px rgb(139, 139, 139);
 }
 
@@ -37,6 +36,7 @@ header {
   justify-content: right;
   position: fixed;
   z-index: 100;
+  top: 0;
 }
 
 .black-field i {
@@ -46,23 +46,18 @@ header {
   padding-right: 50px;
 }
 
-.nav-container {
+nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    min-height: 60px;
-}
-
-nav {
-  margin-top: 75px;
-  display: flex;
+    justify-content: space-evenly;
 }
 
 nav ul li {
-  background-color: rgb(115, 255, 0);
-  text-decoration: none;
   display: inline-block;
+  padding: 30px;
+  margin-top: 3%;
+  font-size: larger;
+  font-weight: 500;
 }
 
 h1 {
