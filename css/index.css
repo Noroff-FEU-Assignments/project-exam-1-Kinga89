@@ -10,6 +10,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Quicksand", sans-serif;
   margin: 0 auto;
   padding: 0;
 }
@@ -23,7 +24,6 @@ body {
 
 main {
   margin: 0 100px;
-  font-family: "Quicksand", sans-serif;
   background-color: white;
   
 }
@@ -95,5 +95,34 @@ h1 {
     background-size: cover;
     background-position: center;
     margin-left: 100px;
+}
+
+
+
+/********FOOTER**********/
+footer{
+  background-color: black;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.icons-footer {
+  text-align: center;
+}
+
+.icons-footer i {
+  padding: 10px;
+  font-size: 25px;
 }
 
