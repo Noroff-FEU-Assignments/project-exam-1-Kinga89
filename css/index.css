@@ -68,7 +68,7 @@ height: 200px;
 }
 
 main {
-  margin: 0 100px;
+  margin: 0 10%;
   background-color: white;
 }
 
@@ -99,8 +99,8 @@ h1 {
     margin-left: 100px;
 }
 
-.hr-lines {
-  position: relative;
+.hr-lines, .hr-lines2 {
+    position: relative;
     text-align: center;
     padding: 30px;
     font-family: "Quicksand", sans-serif;
@@ -108,7 +108,7 @@ h1 {
     font-size: 30px;
 }
 
-.hr-lines:before{
+.hr-lines:before, .hr-lines2:before{
     content:" ";
     display: block;
     height: 2px;
@@ -119,7 +119,7 @@ h1 {
     background: black;
 }
 
-.hr-lines:after{
+.hr-lines:after, .hr-lines2:after {
   content:" ";
   display: block;
   height: 2px;
@@ -138,7 +138,6 @@ h1 {
 
 .post-card {
   flex: 1;
-  border-color: red 5px solid;
   display: flex;
   flex-direction: column;
   margin: 30px 50px;
@@ -178,6 +177,76 @@ background-image: url(../images/girl\ cycling.jpg);
   text-decoration: underline;
   text-align: right;
 }
+
+.aboutme-image {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme-image img {
+  max-height: 40vh;
+  border-radius: 50%;
+}
+
+.aboutme-text {
+text-align: center;
+padding: 20px 50px;
+}
+
+.useful-resources-section {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 40px 80px;
+}
+
+.useful-resources-card,
+.useful-resources-card2,
+.useful-resources-card3 {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+  margin: 0 10px;
+  position: relative;
+}
+
+.useful-resources-card {
+  background-image: url(../images/microphone.jpg);
+}
+
+.useful-resources-card2 {
+  background-image: url(../images/gaudi-book.jpg)
+}
+
+.useful-resources-card3 {
+  background-image: url(../images/man\ with\ tablet.jpg);
+}
+
+.resources-title {
+  background-color:white;
+  display: inline-block;
+  padding: 2% 10%;
+  border-radius: 3%;
+  position: absolute;
+  left: 35%;
+  bottom: 10%;
+  box-shadow: 0 0 2px rgb(139, 139, 139);
+}
+
+.resources-title p {
+  font-weight: bold;
+  margin: 5%;
+  text-align: center;
+}
+
+.hr-lines2:before{
+    min-width: 20%;
+}
+
+.hr-lines2:after{
+  min-width: 20%;
+}
+
 
 /********FOOTER**********/
 footer{
