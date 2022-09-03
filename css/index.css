@@ -10,36 +10,14 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 150vh;
   font-family: "Quicksand", sans-serif;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.background-main {
-  background-image: url(../images/toluca.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-  height: 100%;
-}
-
-main {
-  margin: 0 100px;
-  background-color: white;
-  
-}
-
-header {
-  top: 0;
-  height: 160px;
-  width: 100%;
-  z-index: 100;
-  background-color: white;
-  box-shadow: 0 0 3px rgb(139, 139, 139);
+  margin: 0;
 }
 
 .black-field {
   background-color: black;
-  height: 40px;
+  max-height: 40px;
   width: 100%;
   display: flex;
   justify-content: right;
@@ -53,6 +31,15 @@ header {
   font-size: 20px;
   padding: 10px;
   padding-right: 50px;
+}
+header {
+  top: 0;
+  max-height: 160px;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 0 3px rgb(139, 139, 139);
+  position: fixed;
 }
 
 nav ul {
@@ -69,6 +56,22 @@ nav ul li {
   font-weight: 500;
 }
 
+.background-main {
+  background-image: url(../images/toluca.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.spacer {
+height: 200px;
+}
+
+main {
+  margin: 0 100px;
+  background-color: white;
+}
+
 h1 {
   font-family: "Playfair Display", serif;
   margin-top: 0;
@@ -76,9 +79,8 @@ h1 {
 
 .section1 {
     display: flex;
-    max-height: 300px;
+    min-height: 300px;
     margin-top: 70px;
-    flex-wrap: wrap;
     margin-top: 0;
     padding: 50px;
 }
@@ -97,7 +99,85 @@ h1 {
     margin-left: 100px;
 }
 
+.hr-lines {
+  position: relative;
+    text-align: center;
+    padding: 30px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
 
+.hr-lines:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    min-width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    background: black;
+}
+
+.hr-lines:after{
+  content:" ";
+  display: block;
+  height: 2px;
+  min-width: 25%;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  background: black;
+}
+
+.section2-home {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.post-card {
+  flex: 1;
+  border-color: red 5px solid;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 50px;
+}
+
+.post-card h3 {
+  color: black;
+  text-align: left;
+}
+
+.post-card-image,
+.post-card-image2,
+.post-card-image3 {
+  flex: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
+}
+
+.post-card-image {
+background-image: url(../images/girl\ cycling.jpg);
+}
+
+.post-card-image2 {
+  background-image: url(../images/Krakow.jpg);
+}
+
+.post-card-image3 {
+  background-image: url(../images/parking-space.jpg);
+}
+
+.post-card-text {
+  flex: 40%;
+}
+
+.read-more-btn {
+  text-decoration: underline;
+  text-align: right;
+}
 
 /********FOOTER**********/
 footer{
