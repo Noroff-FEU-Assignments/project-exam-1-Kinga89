@@ -14,9 +14,18 @@ body {
   padding: 0;
 }
 
+.background-main {
+  background-image: url(../images/toluca.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+}
+
 main {
-  margin: 0;
+  margin: 0 100px;
   font-family: "Quicksand", sans-serif;
+  background-color: white;
+  
 }
 
 header {
@@ -62,4 +71,29 @@ nav ul li {
 
 h1 {
   font-family: "Playfair Display", serif;
+  margin-top: 0;
 }
+
+.section1 {
+    display: flex;
+    max-height: 300px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding: 50px;
+}
+
+.text-section1 {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.image-section1 {
+    flex: 1;
+    background-image: url(../images/traffic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 100px;
+}
+
