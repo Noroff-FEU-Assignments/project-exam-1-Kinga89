@@ -16,7 +16,7 @@
 .blog-post {
     display: flex;
     flex-direction: row;
-    margin: 3% 10%;
+    margin: 5% 10%;
 }
 
 .blog-image {
@@ -44,7 +44,7 @@
 }
 
 .view-more-btn {
-    margin: 0 auto;
+    margin: 50px auto;
     display: block;
 }
 

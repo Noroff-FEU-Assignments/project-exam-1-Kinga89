@@ -1,0 +1,52 @@
+@import "../css/globalstyles.css";
+@import "../css/header&footer.css";
+
+main h1 {
+   display: inline-block;
+    margin: 0 auto;
+   font-size: 40px;
+   padding-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 2px rgb(162, 162, 162);
+}
+
+.section-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    min-width: 250px;
+    height: 25px;
+    display: inline-block;
+    margin: 0 auto;
+    border: white;
+    box-shadow: 0 0 2px black;
+    border-radius: 5%;
+    right: 0;
+}
+
+textarea {
+    height: 60px;
+}
+
+.form-error {
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+label {
+    margin: 0 auto;
+}
+
+.send-button {
+    margin: 30px auto;
+}

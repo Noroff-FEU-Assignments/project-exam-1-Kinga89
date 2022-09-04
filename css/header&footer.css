@@ -16,6 +16,7 @@
     padding-right: 50px;
   }
   header {
+    font-family: "Quicksand", sans-serif;
     top: 0;
     max-height: 160px;
     width: 100%;
@@ -49,9 +50,11 @@
 /********FOOTER**********/
 footer{
     background-color: black;
+    font-family: "Quicksand", sans-serif
   }
   
-  h3 {
+  footer h3 {
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     color: white;
     padding-top: 20px;

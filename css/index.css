@@ -2,13 +2,6 @@
 @import "../css/header&footer.css";
 
 
-
-
-h1 {
-  font-family: "Playfair Display", serif;
-  margin-top: 0;
-}
-
 .section1 {
     display: flex;
     min-height: 300px;
