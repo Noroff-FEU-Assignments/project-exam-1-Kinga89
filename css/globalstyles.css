@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  :before,
+  :after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+  }
+  
+  .background-main {
+    background-image: url(../images/toluca.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .spacer {
+    height: 200px;
+    }
+
+  main {
+    margin: 0 10%;
+    background-color: white;
+  }
+
+  .fa-arrow-left {
+    left: 0;
+    display: inline-block;
+    font-size: 30px;
+    padding-left: 5%;
+  }
+
+  .cta-button {
+    background-color: #FFDD00;
+    color: black;
+    font-weight: bold;
+    display: inline;
+    text-decoration: none;
+    display: inline;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 0 3px black;
+  }
+
+  .cta-button:hover {
+    background-color: white;
+  }
+
+  

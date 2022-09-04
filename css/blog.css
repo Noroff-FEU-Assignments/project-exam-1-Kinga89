@@ -1,0 +1,50 @@
+@import "../css/globalstyles.css";
+@import "../css/header&footer.css";
+
+.filter-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.all-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 10%;
+}
+
+.blog-image {
+    flex: 1;
+}
+
+.blog-image img {
+    max-height: 30vh;
+}
+
+.blog-text {
+    flex: 1;
+    padding-left: 5%;
+}
+
+.blog-text h3 {
+    color: black;
+    margin: 0;
+    padding-top: 0;
+    text-align: left;
+}
+
+.read-more-post-btn {
+    text-decoration: underline;
+}
+
+.view-more-btn {
+    margin: 0 auto;
+    display: block;
+}
+

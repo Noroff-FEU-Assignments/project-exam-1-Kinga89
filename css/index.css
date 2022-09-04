@@ -1,76 +1,8 @@
-html {
-  box-sizing: border-box;
-}
+@import "../css/globalstyles.css";
+@import "../css/header&footer.css";
 
-:before,
-:after {
-  box-sizing: inherit;
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 150vh;
-  font-family: "Quicksand", sans-serif;
-  margin: 0;
-}
 
-.black-field {
-  background-color: black;
-  max-height: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-}
-
-.black-field i {
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  padding-right: 50px;
-}
-header {
-  top: 0;
-  max-height: 160px;
-  width: 100%;
-  z-index: 100;
-  background-color: white;
-  box-shadow: 0 0 3px rgb(139, 139, 139);
-  position: fixed;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 30px;
-  margin-top: 3%;
-  font-size: larger;
-  font-weight: 500;
-}
-
-.background-main {
-  background-image: url(../images/toluca.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-  height: 100%;
-}
-
-.spacer {
-height: 200px;
-}
-
-main {
-  margin: 0 10%;
-  background-color: white;
-}
 
 h1 {
   font-family: "Playfair Display", serif;
@@ -248,30 +180,5 @@ padding: 20px 50px;
 }
 
 
-/********FOOTER**********/
-footer{
-  background-color: black;
-}
 
-h3 {
-  text-align: center;
-  color: white;
-  padding-top: 20px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding-bottom: 30px;
-}
-
-.icons-footer {
-  text-align: center;
-}
-
-.icons-footer i {
-  padding: 10px;
-  font-size: 25px;
-}
 
