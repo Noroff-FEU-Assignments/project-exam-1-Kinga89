@@ -1,0 +1,7 @@
+@import "../css/globalstyles.css";
+@import "../css/header&footer.css";
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+}

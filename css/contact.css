@@ -6,6 +6,7 @@ main h1 {
     margin: 0 auto;
    font-size: 40px;
    padding-bottom: 20px;
+   font-family: "Quicksand", sans-serif;
 }
 
 .contact-form {

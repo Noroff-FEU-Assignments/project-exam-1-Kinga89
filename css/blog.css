@@ -13,6 +13,11 @@
     flex-direction: column;
 }
 
+.all-posts a {
+    text-decoration: none;
+    color: black;
+}
+
 .blog-post {
     display: flex;
     flex-direction: row;
@@ -21,10 +26,12 @@
 
 .blog-image {
     flex: 1;
+    flex-direction: row;
 }
 
-.blog-image img {
-    max-height: 30vh;
+.blog-image > img {
+    max-height: 40vh;
+    max-width: 50%;
 }
 
 .blog-text {
