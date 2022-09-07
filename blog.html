@@ -42,17 +42,26 @@
         <main>
             <div class="spacer"></div>
             <i class="fas fa-arrow-left"></i>
-
-            <div class="filter-posts">
+            <div class="filter-container">
+            <form class="filter-posts">
                 <p>Filter:</p>
-                <p>All <i class="far fa-circle"></i></p>
-                <p>Transport <i class="far fa-circle"></i></p>
-                <p>Architecture <i class="far fa-circle"></i></p>
-                <p>Urban Design <i class="far fa-circle"></i></p>
-                <p>City Planning <i class="far fa-circle"></i></p>
+                 <label for="all">All</label>
+                <input type="radio" id="all" name="filtered-posts" value="All">
+               
+                <label for="transport">Transport</label>
+                <input type="radio" id="transport" name="filtered-posts" value="Transport">
+                
+                <label for="architecture">Architecture</label>
+                <input type="radio" id="architecture" name="filtered-posts" value="Architecture">
+               
+                <label for="urban-design">Urban Design</label>
+                <input type="radio" id="urban-design" name="filtered-posts" value="Urban Design">
+                
+                <label for="city-planning">City Planning</label>
+                <input type="radio" id="city-planning" name="filtered-posts" value="City Planning">
                 <button class="cta-button small-button"><i class="fa fa-search"></i></button>
-            </div>
-
+            </form>
+        </div>
             <section class="all-posts">
             </section>
             <div class="cta-button view-more-btn">View More</div>

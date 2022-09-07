@@ -18,8 +18,11 @@ async function fetchPosts() {
             <a href= /post.html?id=${blogPost.id}>
             <div class="blog-post">
             <div class="blog-image">
-                <img src="${blogPost._embedded['wp:featuredmedia'][0].source_url}" alt="">
-            </div>
+            <div class="category-label">${blogPost._embedded['wp:term'][0][0].name}</div>
+            <div class="image-blogpost">
+                <img src="${blogPost._embedded['wp:featuredmedia'][0].source_url}" alt="${blogPost._embedded['wp:featuredmedia'][0].alt_text}">
+                </div>
+                </div>
             
             <div class="blog-text">
                 <h2>${blogPost.title.rendered}</h2>

@@ -2,15 +2,26 @@
 @import "../css/header&footer.css";
 
 .filter-posts {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 5%;
+    justify-content: space-evenly;
+}
+
+.filter-posts p {
+    align-self: center;
+    margin-left: 3%;
+}
+
+.filter-posts label{
+    align-self: center;
+    padding-left: 5%;
 }
 
 .all-posts {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .all-posts a {
@@ -25,17 +36,32 @@
 }
 
 .blog-image {
-    flex: 1;
-    flex-direction: row;
+    flex: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
 }
 
-.blog-image > img {
-    max-height: 40vh;
-    max-width: 50%;
+.image-blogpost > img {
+   max-height: 100%;
+    max-width: 100%;
+}
+
+.category-label {
+    width: max-content;
+    height: max-content;
+    padding: 15px;
+    background-color: #E8E8E8;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .blog-text {
-    flex: 1;
+    flex: 60%;
     padding-left: 5%;
 }
 
@@ -44,6 +70,10 @@
     margin: 0;
     padding-top: 0;
     text-align: left;
+}
+
+.small-button {
+    margin: 2%;
 }
 
 .read-more-post-btn {
