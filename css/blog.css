@@ -1,7 +1,22 @@
 @import "../css/globalstyles.css";
 @import "../css/header&footer.css";
 
+.filter-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-button {
+    flex: 10%;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    text-align: center;
+    width: 80px;
+    box-shadow: 0 0 3px black;
+  }
+
 .filter-posts {
+    flex: 90%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -40,7 +55,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-
 }
 
 .image-blogpost > img {

@@ -12,6 +12,23 @@ async function fetchPosts() {
         const response = await fetch(baseURL);
         const posts = await response.json();
         console.log(posts)
+
+        const filteredPosts = posts.filter(post => post._embedded['wp:term'][0][0].name === "Transport");
+        console.log(filteredPosts)
+        
+        const radioBtns = document.querySelectorAll("input[name='filtered-posts']");
+        const searchButton = document.querySelector(".search-button");
+        
+        allPosts.innerHTML = "";
+
+        let selectedCategory = () => {
+            let selected = document.querySelector("input[name='filtered-posts']:checked").id;
+            console.log(selected)
+        }
+
+        searchButton.addEventListener("click", selectedCategory);
+
+        selectedCategory();
         
         posts.forEach(function (blogPost) {
             allPosts.innerHTML += `
