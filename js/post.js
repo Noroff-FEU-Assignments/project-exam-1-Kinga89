@@ -28,11 +28,7 @@ async function fetchPostDetails () {
         <div class="post-text">
         <p>${result.content.rendered}</p>
         </div>
-        
         `
-
-        
-
     } catch (error){
         postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
         console.log (error)
