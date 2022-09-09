@@ -2,20 +2,19 @@ import { goBack } from "./utils.js";
 const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
-
 const addMorePosts = "&per_page=15";
-const baseURL = "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
+const baseURL =
+    "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
+  
 const allPosts = document.querySelector(".all-posts");
 
-
-async function fetchPosts() {
+ async function fetchPosts() {
   try {
     const response = await fetch(baseURL);
     const posts = await response.json();
-      console.log(posts);
-      
-      allPosts.innerHTML = "";
+    console.log(posts);
 
+    allPosts.innerHTML = "";
 
     /**************** ALL POSTS **********************/
     posts.forEach(function (blogPost) {
@@ -37,27 +36,24 @@ async function fetchPosts() {
             </div>
         </div>
         </a>
-            `; 
+            `;
     });
-      
-    /************************LOAD MORE POSTS**************************/
-      let loadMoreBtn = document.querySelector(".view-more-btn");
-      let currentAmount = 10;
-    
-      loadMoreBtn.onclick = () => {
-          let boxes = document.querySelectorAll(".all-posts a"); 
 
-             
-        for (let i = currentAmount; i < currentAmount + 3; i++) {
-                boxes[i].style.display = "flex";   
-          }
-          currentAmount += 3;
-          if (currentAmount >= boxes.length) {
-              loadMoreBtn.style.display = "none"
-          }
-         
-      };
-      
+    /************************LOAD MORE POSTS**************************/
+    let loadMoreBtn = document.querySelector(".view-more-btn");
+    let currentAmount = 10;
+
+    loadMoreBtn.onclick = () => {
+      let boxes = document.querySelectorAll(".all-posts a");
+
+      for (let i = currentAmount; i < currentAmount + 3; i++) {
+        boxes[i].style.display = "flex";
+      }
+      currentAmount += 3;
+      if (currentAmount >= boxes.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    };
 
     /************** RADIO BUTTONS ****************/
     const radioBtns = document.querySelectorAll("input[name='filtered-posts']");

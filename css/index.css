@@ -56,46 +56,77 @@
 }
 
 .section2-home {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 30px;
-}
-
-.post-card {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 30px 50px;
+  overflow: hidden;
 }
 
-.post-card h3 {
+.arrows {
+  display: inline-flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.arrows i {
+  font-size: 30px;
+  padding: 2%; 
+  align-self: center;
+}
+
+.arrows .fa-arrow-left:hover,
+.arrows .fa-arrow-right:hover{
+  color: yellow;
+}
+
+.slider-container {
+  display: flex;
+  margin: auto;
+  justify-content: center; 
+}
+
+.slider-carousel {
+  display: flex;
+  background-color: rgb(211, 211, 211);  
+  box-shadow: 0 0 1px;
+  padding: 20px;
+  margin-left: 2%;
+  width: 100%;
+  border-radius: 2%;
+}
+
+.slide {
+  display: flex;
+  margin: 1%;
+  height: 5%;
+  width: 300px;
+}
+
+.slide a {
+  text-decoration: none;
+}
+
+.card-text h3, p {
   color: black;
   text-align: left;
 }
 
-.post-card-image,
-.post-card-image2,
-.post-card-image3 {
-  flex: 60%;
+
+.card-image {
+  display: flex;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 30vh;
+  justify-content: center;
 }
 
-.post-card-image {
-background-image: url(../images/girl\ cycling.jpg);
+.card-image img {
+  width: 100%;
+  height: 100%;
 }
 
-.post-card-image2 {
-  background-image: url(../images/Krakow.jpg);
-}
 
-.post-card-image3 {
-  background-image: url(../images/parking-space.jpg);
-}
-
-.post-card-text {
-  flex: 40%;
+.card-text {
+  font-size: 15px;
 }
 
 .read-more-btn {
@@ -103,6 +134,8 @@ background-image: url(../images/girl\ cycling.jpg);
   text-align: right;
 }
 
+
+/******************************ABOUT ME**********************************/
 .aboutme-image {
   display: flex;
   justify-content: center;
