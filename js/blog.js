@@ -2,10 +2,11 @@ import { goBack } from "./utils.js";
 const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
-const addMorePosts = "&per_page=15";
-const baseURL = "http://localhost:8383/wp-json/wp/v2/posts?_embed";
 
+const addMorePosts = "&per_page=15";
+const baseURL = "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
 const allPosts = document.querySelector(".all-posts");
+
 
 async function fetchPosts() {
   try {
@@ -16,9 +17,8 @@ async function fetchPosts() {
       allPosts.innerHTML = "";
 
 
-
     /**************** ALL POSTS **********************/
-      posts.forEach(function (blogPost) {
+    posts.forEach(function (blogPost) {
       allPosts.innerHTML += `
             <a href= /post.html?id=${blogPost.id}>
             <div class="blog-post">
@@ -37,19 +37,25 @@ async function fetchPosts() {
             </div>
         </div>
         </a>
-            `;     
+            `; 
     });
+      
+    /************************LOAD MORE POSTS**************************/
+      let loadMoreBtn = document.querySelector(".view-more-btn");
+      let currentAmount = 10;
     
-      /************************LOAD MORE POSTS**************************/
-      const loadMoreBtn = document.querySelector(".view-more-btn");
-        let currentAmount = 10;
-        
-        loadMoreBtn.onclick = () => {
-        let morePosts = [...document.querySelectorAll(".all-posts a .blog-posts")];  
-          for (let i = currentAmount; i > currentAmount +2; i++) {
-          morePosts[i].style.display = "block";
-        }
-            currentAmount += 10;
+      loadMoreBtn.onclick = () => {
+          let boxes = document.querySelectorAll(".all-posts a"); 
+
+             
+        for (let i = currentAmount; i < currentAmount + 3; i++) {
+                boxes[i].style.display = "flex";   
+          }
+          currentAmount += 3;
+          if (currentAmount >= boxes.length) {
+              loadMoreBtn.style.display = "none"
+          }
+         
       };
       
 

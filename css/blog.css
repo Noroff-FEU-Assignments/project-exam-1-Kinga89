@@ -6,15 +6,6 @@
     flex-direction: row;
 }
 
-.search-button {
-    flex: 10%;
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-    text-align: center;
-    width: 80px;
-    box-shadow: 0 0 3px black;
-  }
-
 .filter-posts {
     flex: 90%;
     position: relative;
@@ -42,7 +33,37 @@
 .all-posts a {
     text-decoration: none;
     color: black;
+    display: none;
 }
+
+.all-posts a:nth-child(1) {
+    display: flex;
+}
+
+.all-posts a:nth-child(2) {
+    display: flex;
+}
+
+.all-posts a:nth-child(3) {
+    display: flex;
+}
+.all-posts a:nth-child(4) {
+    display: flex;
+}.all-posts a:nth-child(5) {
+    display: flex;
+}.all-posts a:nth-child(6) {
+    display: flex;
+}.all-posts a:nth-child(7) {
+    display: flex;
+}.all-posts a:nth-child(8) {
+    display: flex;
+}.all-posts a:nth-child(9) {
+    display: flex;
+}.all-posts a:nth-child(10) {
+    display: flex;
+}
+
+
 
 .blog-post {
     display: flex;
@@ -97,5 +118,6 @@
 .view-more-btn {
     margin: 50px auto;
     display: block;
+    cursor:pointer;
 }
 
