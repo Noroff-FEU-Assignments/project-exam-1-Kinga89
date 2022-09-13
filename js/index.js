@@ -1,21 +1,21 @@
 const addMorePosts = "&per_page=15";
 
 const baseURL =
-    "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
-  
+  "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
+
 const sliderContainer = document.querySelector(".slider-container");
 
- async function fetchPosts() {
-     try {
-         const response = await fetch(baseURL);
-         const posts = await response.json();
-         console.log(posts);
+async function fetchPosts() {
+  try {
+    const response = await fetch(baseURL);
+    const posts = await response.json();
+    console.log(posts);
 
-         sliderContainer.innerHTML = "";
+    sliderContainer.innerHTML = "";
 
-         /**************** ALL POSTS **********************/
-         posts.forEach(function (blogPost) {
-             sliderContainer.innerHTML += `
+    /**************** ALL POSTS **********************/
+    posts.forEach(function (blogPost) {
+      sliderContainer.innerHTML += `
              <div class=slider-carousel>
             <div class="slide">   
             <a href= /post.html?id=${blogPost.id}>
@@ -31,37 +31,32 @@ const sliderContainer = document.querySelector(".slider-container");
                 </a>   
              </div>
              </div>
-            `
-         });
+            `;
+    });
 
+    /**************** IMAGE SLIDER **********************/
+    let sliderCarousel = document.querySelectorAll(".slider-carousel");
+    const arrowRight = document.querySelector(".fa-arrow-right");
+    const arrowLeft = document.querySelector(".fa-arrow-left");
 
-    /**************** IMAGE SLIDER **********************/     
-        let slideCarousel = document.querySelectorAll(".slider-carousel");
-         const arrowRight = document.querySelector(".fa-arrow-right");
-         const arrowLeft = document.querySelector(".fa-arrow-left");
+    let counter = 1;
+    const size = sliderCarousel[0].clientWidth;
 
-         let counter = 1;
-         const size = slideCarousel[0].clientWidth;
+    arrowRight.onclick = () => {
+      sliderContainer.style.transition = "transform 0.5s ease-in-out";
+      counter++;
+      sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
 
-   
-         
-         arrowRight.onclick = () => {
-          sliderContainer.style.transition = "transform 0.5s ease-in-out";
-             counter++;
-             sliderContainer.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      console.log(counter);
+    };
 
-             console.log (counter)
-         } 
-         
-         arrowLeft.onclick = () => {
-            sliderContainer.style.transition = "transform 0.5s ease-in-out";
-               counter--;
-               sliderContainer.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  
-               console.log (counter)
-           } 
+    arrowLeft.onclick = () => {
+      sliderContainer.style.transition = "transform 0.5s ease-in-out";
+      counter--;
+      sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
 
-
+      console.log(counter);
+    };
   } catch (error) {}
 }
 
