@@ -14,37 +14,56 @@ async function fetchPosts() {
     const posts = await response.json();
     console.log(posts);
 
-    /************** RADIO BUTTONS ****************/
+   /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
-    const allBlogPosts = document.querySelectorAll(".blog-post");
 
-   
-
-    /*
-
- for (let i = 0; i < radioBtns.length; i++){
-   radioBtns[i].addEventListener("change", (element) => {
-     element.preventDefault();
-   
-     const filterNew = element.target.dataset.filter;
-     console.log (filterNew)
-
-     allBlogPosts.forEach((post) => {
-       if (filterNew === "transport") {
-         post.style.display = "flex";
-       } else {
-         if (post.classList.contains(filter)) {
-          post.style.display = "flex";
-         } else {
-          post.style.display = "none";
+    const transport = posts.filter(
+      (post) => post._embedded["wp:term"][0][0].name === "Transport"
+    );
+    const architecture = posts.filter(
+      (post) => post._embedded["wp:term"][0][0].name === "Architecture"
+    );
+    const urbanDesign = posts.filter(
+      (post) => post._embedded["wp:term"][0][0].slug === "urban-design"
+    );
+    const cityPlanning = posts.filter(
+      (post) => post._embedded["wp:term"][0][0].name === "City Planning"
+    );
+  
+    
+     radioBtns.forEach (function (filterBtn) {
+       filterBtn.addEventListener("change", function () {
+          for (let i = 0; i < filterBtn.length; i++) {
+            filterBtn[i].classList.remove("checked");
          }
-      }
-       
-     })
-   
-   })
+         this.classList.add("checked");
+         
+          let blogBox = this.getAttribute("value");
+          console.log(blogBox);
 
- }*/
+
+          if (blogBox === "All") {
+            console.log(posts);
+          }
+
+          if (blogBox === "Transport") {
+            console.log(transport);
+          }
+
+          if (blogBox === "Architecture") {
+            console.log(architecture);
+          }
+
+          if (blogBox === "Urban Design") {
+            console.log(urbanDesign);
+          }
+
+          if (blogBox === "City Planning") {
+            console.log(cityPlanning);
+          }
+        });
+      });
+
 
     /**************** ALL POSTS **********************/
     allPosts.innerHTML = "";
@@ -68,6 +87,7 @@ async function fetchPosts() {
         </div>
         </a>
             `;
+      
     });
 
     /************************LOAD MORE POSTS**************************/
@@ -86,55 +106,7 @@ async function fetchPosts() {
       }
     };
 
-    /*-------------------------FILTER--------------------------*/
-
-    const all = posts;
-
-    const transport = posts.filter(
-      (post) => post._embedded["wp:term"][0][0].name === "Transport"
-    );
-    const architecture = posts.filter(
-      (post) => post._embedded["wp:term"][0][0].name === "Architecture"
-    );
-    const urbanDesign = posts.filter(
-      (post) => post._embedded["wp:term"][0][0].slug === "urban-design"
-    );
-    const cityPlanning = posts.filter(
-      (post) => post._embedded["wp:term"][0][0].name === "City Planning"
-    );
-  
-    
-     radioBtns.forEach (function (filterBtn) {
-       filterBtn.addEventListener("change", function () {
-          for (let j = 0; j < filterBtn.length; j++) {
-            filterBtn[j].classList.remove("checked");
-          }
-          this.classList.add("checked");
-          let blogBox = this.getAttribute("value");
-          console.log(blogBox);
-
-          if (blogBox === "All") {
-            console.log(all);
-          }
-
-          if (blogBox === "Transport") {
-            console.log(transport);
-          }
-
-          if (blogBox === "Architecture") {
-            console.log(architecture);
-          }
-
-          if (blogBox === "Urban Design") {
-            console.log(urbanDesign);
-          }
-
-          if (blogBox === "City Planning") {
-            console.log(cityPlanning);
-          }
-        });
-      });
-
+   
     
 
   } catch (error) {}

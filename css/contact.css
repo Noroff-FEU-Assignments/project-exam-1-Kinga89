@@ -12,44 +12,53 @@ main h1 {
 .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto 20px;
-    padding-bottom: 20px;
+    align-content: center;
+    text-align: center;
+    padding-bottom: 15vh;
+    border: solid pink;
+}
+
+#form {
+    max-width: 600px;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    border: solid rgb(198, 198, 198);   
+    border-radius: 3%;
+     display: block;
 }
 
 .section-form {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    border: blue solid;
 }
 
 input, textarea {
-    width: 100%;
-    height: 25px;
-    display: inline-block;
-    margin: 0 auto;
-    border: white;
-    box-shadow: 0 0 2px black;
-    border-radius: 5%;
-    border: red solid;
-
+      margin: 15px 10px 0;
+      padding: 10px;
+      width: 90%;
+     border-radius: 4%;
 }
 
 textarea {
     height: 60px;
 }
 
-.form-error {
-    font-size: 12px;
-    margin: 10px auto;
+label {
+    left: 0;
+    margin: 0 auto;
+    font-weight: 500;
 }
 
-label {
-    margin: 0 auto;
-}
+.form-error {
+    margin-top: 2px;
+    font-size: 10px;
+    margin-left: 10px;
+    color: red;
+    display: none;
+  }
+
 
 .send-button {
-    margin: 30px auto;
+  bottom: -70px;
+  position: relative;
 }

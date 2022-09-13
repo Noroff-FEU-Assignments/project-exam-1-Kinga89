@@ -43,37 +43,38 @@
             <i class="fas fa-arrow-left"></i>
             <h1>CONTACT ME</h1>
             <section class="contact-form">
-                <form id="form" method="get">
+                <form id="form" method="get" class="validation-passed">
                     <div class="section-form">
-                        <label for="name"><strong>NAME:</strong> 
-                          <input id="name"/>
+                        <label for="name">NAME:
+                          <input name="name"id="name"/>
                         </label>
                         <div id="nameError" class="form-error">This field has to contain more than 5 characters*</div>
                       </div>
                       <div class="section-form">
-                        <label for="email"> <strong>EMAIL:</strong> 
+                        <label for="email"> EMAIL:
                           <input id="email" />
                         </label>
                         <div id="emailError" class="form-error">Invalid email address*</div>
                       </div>
                       <div class="section-form">
-                        <label for="subject"><strong>SUBJECT:</strong> 
+                        <label for="subject">SUBJECT:
                           <input id="subject"/>
                         </label>
-                        <div id="subjectError" class="form-error">This field has to contain more than 15 characters*</div>
+                        <div class="form-error" id="subjectError">
+                          Subject must have at least 15 characters
+                        </div>
                       </div>
                       <div class="section-form">
-                        <label for="message"><strong>MESSAGE:</strong> 
+                        <label for="message">MESSAGE:
                           <textarea id="message"></textarea>
                         </label>
                         <div id="messageError" class="form-error">This field has to contain more than 25 characters*</div>
-                      </div>
+                      </div> 
+                      <button class="cta-button send-button">Send</button>
                 </form>
-                <div class="cta-button send-button"> Send</div>
+               
             </section>
         </main>
-        
-  
     <footer>
         <h3>Follow me</h3>
         <div class="footer-container">
