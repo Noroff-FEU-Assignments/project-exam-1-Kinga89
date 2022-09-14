@@ -19,6 +19,7 @@ html {
   .background-main {
     background-image: url(../images/toluca.jpg);
     background-repeat: repeat;
+    object-position: top;
     background-size: cover;
     height: 100%;
   }

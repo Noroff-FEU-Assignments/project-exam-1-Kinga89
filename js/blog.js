@@ -14,6 +14,8 @@ async function fetchPosts() {
     const posts = await response.json();
     console.log(posts);
 
+    document.title = "Blog Posts | Urban Planning Blog"
+
    /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
 

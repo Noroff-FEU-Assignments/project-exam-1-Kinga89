@@ -18,7 +18,7 @@
   padding: 1%;
   top: 60%;
   left: 10%;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 
@@ -61,29 +61,47 @@ video {
   background: black;
 }
 
+.section-latest-posts{
+  display: flex;
+  flex-direction: row;
+}
+
 .section2-home {
+  overflow: hidden;
+  flex: 1;  
   margin-bottom: 30px;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.arrows {
-  display: inline-flex;
-  justify-content: center;
-  padding: 2%;
-}
 
-.arrows i {
+
+.fa-arrow-left,
+.fa-arrow-right {
   font-size: 30px;
-  padding: 2%; 
-  align-self: center;
   cursor: pointer;
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(236, 236, 236, 0.902);
+  border-radius: 50%;
+  align-self: center;
+  
 }
 
-.arrows .fa-arrow-left:hover,
-.arrows .fa-arrow-right:hover{
-  color: yellow;
+.fa-arrow-left {
+  left: 0;
+}
+
+
+.fa-arrow-right {
+  right: 0;
+}
+
+.fa-arrow-left:hover,
+.fa-arrow-right:hover{
+  color: #FFDD00;
 }
 
 .slider-container {
@@ -98,13 +116,14 @@ video {
   padding: 20px;
   width: 100%;
   border-radius: 2%;
- margin: 20px;
+  margin: 20px;
+  max-height: fit-content;
 }
 
 .slide {
   display: flex;
   margin: 1%;
-  height: 10%;
+  height: 100%;
   width: 300px;
 }
 

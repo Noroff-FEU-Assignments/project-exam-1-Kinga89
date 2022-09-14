@@ -36,6 +36,7 @@ input, textarea {
       padding: 10px;
       width: 90%;
      border-radius: 4%;
+     background-color: rgb(232, 232, 232);
 }
 
 textarea {

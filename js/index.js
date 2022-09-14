@@ -4,7 +4,7 @@ const baseURL =
   "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
 
 const sliderContainer = document.querySelector(".slider-container");
-
+  document.title = "Home | Urban Planning Blog"
 
 async function fetchPosts() {
   try {
@@ -12,7 +12,7 @@ async function fetchPosts() {
     const posts = await response.json();
     console.log(posts);
     sliderContainer.innerHTML = "";
-    document.title = "Home"
+  
 
     /**************** ALL POSTS **********************/
     posts.forEach(function (blogPost) {

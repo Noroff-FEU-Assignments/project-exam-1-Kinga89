@@ -45,7 +45,10 @@
     color: black;
   }
 
- 
+ .current {
+  text-decoration: underline;
+  font-weight: bolder;
+ }
   
 /********FOOTER**********/
 footer{
