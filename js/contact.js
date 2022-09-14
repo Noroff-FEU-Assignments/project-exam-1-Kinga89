@@ -20,6 +20,8 @@ const messageError = document.querySelector("#messageError");
 
 const sendButton = document.querySelector(".send-button");
 
+document.title = "Contact Me";
+
 function validateForm(evt) {
  
     evt.preventDefault();

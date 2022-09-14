@@ -12,7 +12,7 @@ const id = params.get("id");
 
 console.log(id);
 
-const detailsURL = "http://localhost:8383/wp-json/wp/v2/posts/" + id;
+const detailsURL = "https://blog.kingakot.com/wp-json/wp/v2/posts/" + id;
 
 async function fetchPostDetails () {
     try {
@@ -29,6 +29,8 @@ async function fetchPostDetails () {
         <p>${result.content.rendered}</p>
         </div>
         `
+
+        document.title = `${result.title.rendered}`;
     } catch (error){
         postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
         console.log (error)
