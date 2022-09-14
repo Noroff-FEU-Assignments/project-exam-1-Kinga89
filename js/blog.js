@@ -39,9 +39,8 @@ async function fetchPosts() {
          this.classList.add("checked");
          
           let blogBox = this.getAttribute("value");
-          console.log(blogBox);
-
-
+         console.log(blogBox);
+         
           if (blogBox === "All") {
             console.log(posts);
           }
@@ -64,6 +63,8 @@ async function fetchPosts() {
         });
       });
 
+    
+    
 
     /**************** ALL POSTS **********************/
     allPosts.innerHTML = "";
@@ -80,7 +81,7 @@ async function fetchPosts() {
             
             <div class="blog-text">
                 <h2>${blogPost.title.rendered}</h2>
-                <p>${blogPost.date}</p>
+                <p>Published by: ${blogPost._embedded.author[0].name}</p>
                 <p>${blogPost.excerpt.rendered}</p>
                 <p class="read-more-post-btn">Read more</p>
             </div>

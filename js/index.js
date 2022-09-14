@@ -1,17 +1,18 @@
 const addMorePosts = "&per_page=15";
 
 const baseURL =
-  "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
+  "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
 
 const sliderContainer = document.querySelector(".slider-container");
+
 
 async function fetchPosts() {
   try {
     const response = await fetch(baseURL);
     const posts = await response.json();
     console.log(posts);
-
     sliderContainer.innerHTML = "";
+    document.title = "Home"
 
     /**************** ALL POSTS **********************/
     posts.forEach(function (blogPost) {
@@ -24,7 +25,7 @@ async function fetchPosts() {
                 </div>
                 <div class="card-text">
                 <h3>${blogPost.title.rendered}</h3>
-                <p>${blogPost.date}</p>
+                <p>Author: ${blogPost._embedded.author[0].name}</p>
                 <p>${blogPost.excerpt.rendered}</p>
                 <p class="read-more-btn">Read more</p>
                 </div>
@@ -57,6 +58,9 @@ async function fetchPosts() {
 
       console.log(counter);
     };
+
+
+
   } catch (error) {}
 }
 

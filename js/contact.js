@@ -20,8 +20,9 @@ const messageError = document.querySelector("#messageError");
 
 const sendButton = document.querySelector(".send-button");
 
-function validateForm() {
+function validateForm(evt) {
  
+    evt.preventDefault();
   /*Checks if the name has more than 5 characters*/
   if (checkLength(name.value, 5) === true) {
     nameError.style.display = "none";

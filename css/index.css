@@ -4,25 +4,31 @@
 
 .section1 {
     display: flex;
-    min-height: 300px;
-    margin-top: 70px;
+    flex-direction: column;
+    max-height: 60vh;
     margin-top: 0;
-    padding: 50px;
+    padding: 0 5%;
+    position: relative;
 }
 
-.text-section1 {
-    flex: 1;
-    padding-right: 50px;
+.section1 h1 {
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  padding: 1%;
+  top: 60%;
+  left: 10%;
+  font-size: 40px;
 }
 
-.image-section1 {
-    flex: 1;
-    background-image: url(../images/traffic.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-left: 100px;
+
+video {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
 }
+
 
 .hr-lines, .hr-lines2 {
     position: relative;
@@ -72,6 +78,7 @@
   font-size: 30px;
   padding: 2%; 
   align-self: center;
+  cursor: pointer;
 }
 
 .arrows .fa-arrow-left:hover,
@@ -87,18 +94,17 @@
 
 .slider-carousel {
   display: flex;
-  background-color: rgb(211, 211, 211);  
   box-shadow: 0 0 1px;
   padding: 20px;
-  margin-left: 2%;
   width: 100%;
   border-radius: 2%;
+ margin: 20px;
 }
 
 .slide {
   display: flex;
   margin: 1%;
-  height: 5%;
+  height: 10%;
   width: 300px;
 }
 
@@ -113,8 +119,6 @@
 
 
 .card-image {
-  display: flex;
-  background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
 }
