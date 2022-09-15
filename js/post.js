@@ -14,13 +14,14 @@ console.log(id);
 
 const detailsURL = "https://blog.kingakot.com/wp-json/wp/v2/posts/" + id;
 
-async function fetchPostDetails () {
-    try {
-        const details = await fetch(detailsURL);
-        const result = await details.json();
-        console.log(result);
-
-        postContainer.innerHTML = `
+async function fetchPostDetails() {
+  try {
+    const details = await fetch(detailsURL);
+    const result = await details.json();
+    console.log(result);
+    document.title = `${result.title.rendered}`;
+      
+    postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
         <p>${result.date}</p>
         <p>Written by ${result.date}</p>
@@ -31,14 +32,12 @@ async function fetchPostDetails () {
         <p>${result.content.rendered}</p>
         </div>
         <div class="comment-section"><p>${result._links.replies[0].href}</p></div>
-        `
+        `;
 
-        document.title = `${result.title.rendered}`;
-
-    } catch (error){
-        postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
-        console.log (error)
-    } 
-
+ 
+  } catch (error) {
+    postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
+    console.log(error);
+  }
 }
 fetchPostDetails();
