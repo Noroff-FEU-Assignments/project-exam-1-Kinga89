@@ -70,12 +70,15 @@ footer{
     padding-bottom: 30px;
   }
   
-  .icons-footer {
+  .icons-footer,
+  .icons-footer p {
     text-align: center;
+    color: white;
   }
   
   .icons-footer i {
     padding: 10px;
     font-size: 25px;
   }
+
   

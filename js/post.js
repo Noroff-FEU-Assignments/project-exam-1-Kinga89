@@ -22,15 +22,19 @@ async function fetchPostDetails () {
 
         postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
+        <p>${result.date}</p>
+        <p>Written by ${result.date}</p>
         <div class="post-image">
         <img src="${result}" alt="">
         </div>
         <div class="post-text">
         <p>${result.content.rendered}</p>
         </div>
+        <div class="comment-section"><p>${result._links.replies[0].href}</p></div>
         `
 
         document.title = `${result.title.rendered}`;
+
     } catch (error){
         postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
         console.log (error)

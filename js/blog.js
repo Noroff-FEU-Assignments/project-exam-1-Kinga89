@@ -4,7 +4,7 @@ previousPage.addEventListener("click", goBack);
 
 const addMorePosts = "&per_page=15";
 const baseURL =
-  "http://localhost:8383/wp-json/wp/v2/posts?_embed" + addMorePosts;
+"https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
 
 const allPosts = document.querySelector(".all-posts");
 
@@ -14,7 +14,7 @@ async function fetchPosts() {
     const posts = await response.json();
     console.log(posts);
 
-    document.title = "Blog Posts | Urban Planning Blog"
+    document.title = "Urbs & Civitas | Blog Posts"
 
    /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
@@ -32,7 +32,151 @@ async function fetchPosts() {
       (post) => post._embedded["wp:term"][0][0].name === "City Planning"
     );
   
+    const radioBtn1 = document.querySelector("#radio-button1");
+    const radioBtn2 = document.querySelector("#radio-button2");
+    const radioBtn3 = document.querySelector("#radio-button3");
+    const radioBtn4 = document.querySelector("#radio-button4");
+    const radioBtn5 = document.querySelector("#radio-button5");
+
+    radioBtn1.addEventListener("change", () => {
+      allPosts.innerHTML = "";
+      posts.forEach(function (blogPost) {
+        allPosts.innerHTML += `
+            <a href= /post.html?id=${blogPost.id}>
+            <div class="blog-post">
+            <div class="blog-image">
+            <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+            <div class="image-blogpost">
+                <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+                </div>
+                </div>
+            
+            <div class="blog-text">
+                <h2>${blogPost.title.rendered}</h2>
+                <p>Published by: ${blogPost._embedded.author[0].name}</p>
+                <p>${blogPost.excerpt.rendered}</p>
+                <p class="read-more-post-btn">Read more</p>
+            </div>
+        </div>
+        </a>
+            `;
+      
+      });
+    });
+
+
+    radioBtn2.addEventListener("change", () => {
+    loadMoreBtn.style.display = "none";
+    allPosts.innerHTML = "";
+    transport.forEach(function (blogPost) {
+      allPosts.innerHTML += `
+            <a href= /post.html?id=${blogPost.id}>
+            <div class="blog-post">
+            <div class="blog-image">
+            <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+            <div class="image-blogpost">
+                <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+                </div>
+                </div>
+            <div class="blog-text">
+                <h2>${blogPost.title.rendered}</h2>
+                <p>Published by: ${blogPost._embedded.author[0].name}</p>
+                <p>${blogPost.excerpt.rendered}</p>
+                <p class="read-more-post-btn">Read more</p>
+            </div>
+        </div>
+        </a>
+            `;
+    });
+      
+    })
+
+    radioBtn3.addEventListener("change", () => {
+      loadMoreBtn.style.display = "none";
+      allPosts.innerHTML = "";
+      architecture.forEach(function (blogPost) {
+        allPosts.innerHTML += `
+              <a href= /post.html?id=${blogPost.id}>
+              <div class="blog-post">
+              <div class="blog-image">
+              <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+              <div class="image-blogpost">
+                  <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+                  </div>
+                  </div>
+              
+              <div class="blog-text">
+                  <h2>${blogPost.title.rendered}</h2>
+                  <p>Published by: ${blogPost._embedded.author[0].name}</p>
+                  <p>${blogPost.excerpt.rendered}</p>
+                  <p class="read-more-post-btn">Read more</p>
+              </div>
+          </div>
+          </a>
+              `;
+     
+        
+      })
+      });
+        
+    radioBtn4.addEventListener("change", () => {
+      loadMoreBtn.style.display = "none";
+        allPosts.innerHTML = "";
+        urbanDesign.forEach(function (blogPost) {
+          allPosts.innerHTML += `
+                <a href= /post.html?id=${blogPost.id}>
+                <div class="blog-post">
+                <div class="blog-image">
+                <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+                <div class="image-blogpost">
+                    <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+                    </div>
+                    </div>
+                
+                <div class="blog-text">
+                    <h2>${blogPost.title.rendered}</h2>
+                    <p>Published by: ${blogPost._embedded.author[0].name}</p>
+                    <p>${blogPost.excerpt.rendered}</p>
+                    <p class="read-more-post-btn">Read more</p>
+                </div>
+            </div>
+            </a>
+                `;
+       
+          
+        })
+      });
     
+    radioBtn5.addEventListener("change", () => {
+      loadMoreBtn.style.display = "none";
+        allPosts.innerHTML = "";
+        cityPlanning.forEach(function (blogPost) {
+          allPosts.innerHTML += `
+                <a href= /post.html?id=${blogPost.id}>
+                <div class="blog-post">
+                <div class="blog-image">
+                <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+                <div class="image-blogpost">
+                    <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+                    </div>
+                    </div>
+                
+                <div class="blog-text">
+                    <h2>${blogPost.title.rendered}</h2>
+                    <p>Published by: ${blogPost._embedded.author[0].name}</p>
+                    <p>${blogPost.excerpt.rendered}</p>
+                    <p class="read-more-post-btn">Read more</p>
+                </div>
+            </div>
+            </a>
+                `;
+       
+          
+        })
+        });
+    
+    
+    /*
      radioBtns.forEach (function (filterBtn) {
        filterBtn.addEventListener("change", function () {
           for (let i = 0; i < filterBtn.length; i++) {
@@ -67,11 +211,11 @@ async function fetchPosts() {
 
     
     
-
+*/
     /**************** ALL POSTS **********************/
-    allPosts.innerHTML = "";
-    posts.forEach(function (blogPost) {
-      allPosts.innerHTML += `
+      allPosts.innerHTML = "";
+      posts.forEach(function (blogPost) {
+        allPosts.innerHTML += `
             <a href= /post.html?id=${blogPost.id}>
             <div class="blog-post">
             <div class="blog-image">
@@ -91,7 +235,8 @@ async function fetchPosts() {
         </a>
             `;
       
-    });
+      });
+
 
     /************************LOAD MORE POSTS**************************/
     let loadMoreBtn = document.querySelector(".view-more-btn");

@@ -1,2 +1,91 @@
 @import "../css/globalstyles.css";
 @import "../css/header&footer.css";
+
+
+.aboutpage-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.aboutpage-container h1,
+.about-author-container h2,
+.get-in-touch-container h3 {
+    display: inline-block;
+    margin: 0 25%;
+   font-size: 40px;
+   padding-bottom: 20px;
+   font-family: "Quicksand", sans-serif;
+}
+
+.welcome-container{
+    max-height: 60vh;
+    padding: 5%;
+    position: relative;   
+    width: 90%;
+}
+
+.welcome-container img {
+   margin-left: 40%;
+   border-radius: 1%;
+   width: 60%;
+}
+
+.welcome-text {
+background-color:#E8E8E8;
+position: absolute;
+max-width: 40%;
+padding: 2%;
+top: 20%;
+opacity: 90%;
+border-radius: 1%;
+}
+
+
+.about-author-container {
+     margin: 5% 0;
+}
+
+.aboutme-container {
+    display: flex;
+}
+
+.aboutme-text {
+    flex: 1;
+    padding: 3% 5%;
+}
+
+.aboutme-image {
+    flex: 1;
+}
+
+.aboutme-image img {
+    max-height: 40vh;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.get-in-touch-container {
+    margin-bottom: 5%;
+}
+
+.get-in-touch-container p {
+    padding: 0 5%;
+}
+
+.get-in-touch-button {
+    width: max-content;
+    min-width: 10%;
+    margin: 3% 5%;
+    cursor: pointer;
+}
+
+.get-in-touch-button .fa-arrow-right {
+    padding-left: 7px;
+}
+
+.get-in-touch-button a {
+    text-decoration: none;
+    color: black;
+}
