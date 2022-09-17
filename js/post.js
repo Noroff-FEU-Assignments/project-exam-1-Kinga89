@@ -38,13 +38,12 @@ async function fetchPostDetails() {
     );
     const txt = parsedDocumentTxt.querySelectorAll("p");
 
-      
-        let newTxt = Array.from(txt)
-      console.log(newTxt);
-      
-      console.log (img.attributes.alt.nodeValue)
-          
-          postContainer.innerHTML = `
+    let newTxt = Array.from(txt);
+    console.log(newTxt);
+
+    console.log(img.attributes.alt.nodeValue);
+
+    postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
         <p>${result.date}</p>
         <p>Written by ${result.author}</p>
@@ -57,33 +56,26 @@ async function fetchPostDetails() {
         <div class="post-text">
         </div>
         `;
-      
-    const postText = document.querySelector(".post-text")
-      newTxt.forEach(function (post) {
-          postText.innerHTML += `
+
+    const postText = document.querySelector(".post-text");
+    newTxt.forEach(function (post) {
+      postText.innerHTML += `
           <p>${post.innerHTML}</p>
           `;
-      });
+    });
 
-      const modal = document.querySelector(".modal");
+    const modal = document.querySelector(".modal");
 
-      const postImage = document.querySelector(".post-image img");
-      const modalImage = document.querySelector(".modal-img");
-      postImage.onclick = function () {
-        modal.style.display = "block";
-          modalImage.src = this.src;
-      }
+    const postImage = document.querySelector(".post-image img");
+    const modalImage = document.querySelector(".modal-img");
+    postImage.onclick = function () {
+      modal.style.display = "block";
+      modalImage.src = this.src;
+    };
 
-      modal.onclick = function() { 
-        modal.style.display = "none";
-      }
-    
-
-    
-          
-          
-      
-
+    modal.onclick = function () {
+      modal.style.display = "none";
+    };
   } catch (error) {
     postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
     console.log(error);
