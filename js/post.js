@@ -28,7 +28,7 @@ async function fetchPostDetails() {
       "text/html"
     );
     const img = parsedDocument.querySelector("img");
-    console.log(img.attributes.src.nodeValue);
+    console.log(img.attributes);
 
     const parserTxt = new DOMParser();
     const content2 = result;
@@ -42,13 +42,14 @@ async function fetchPostDetails() {
         let newTxt = Array.from(txt)
       console.log(newTxt);
       
+      console.log (img.attributes.alt.nodeValue)
           
           postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
         <p>${result.date}</p>
         <p>Written by ${result.author}</p>
         <div class="post-image">
-        <img src="${img.attributes.src.nodeValue}" class="image" alt="">
+        <img src="${img.attributes.src.nodeValue}" class="image" alt="${img.attributes.alt.nodeValue}">
         </div>
         <div class="modal">
         <img src="${img.attributes.src.nodeValue}" class="modal-img" alt="">
