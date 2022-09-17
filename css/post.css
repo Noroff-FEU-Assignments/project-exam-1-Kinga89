@@ -16,3 +16,19 @@
     display: block;
     border-color: red solid;
 }
+
+.post-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.post-image {
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    border-color: red solid 3px;
+}
+
+.post-text {
+    padding: 3% 10%;
+}
