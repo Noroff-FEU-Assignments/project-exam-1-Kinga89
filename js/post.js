@@ -48,19 +48,41 @@ async function fetchPostDetails() {
         <p>${result.date}</p>
         <p>Written by ${result.author}</p>
         <div class="post-image">
-        <img src="${img.attributes.src.nodeValue}" alt="">
+        <img src="${img.attributes.src.nodeValue}" class="image" alt="">
+        </div>
+        <div class="modal">
+        <img src="${img.attributes.src.nodeValue}" class="modal-img" alt="">
         </div>
         <div class="post-text">
         </div>
         `;
       
-    const postT = document.querySelector(".post-text")
-      newTxt.forEach(function (blogPost) {
-          postT.innerHTML += `
-          <p>${blogPost.innerHTML}</p>
+    const postText = document.querySelector(".post-text")
+      newTxt.forEach(function (post) {
+          postText.innerHTML += `
+          <p>${post.innerHTML}</p>
           `;
       });
+
+      const modal = document.querySelector(".modal");
+
+      const postImage = document.querySelector(".post-image img");
+      const modalImage = document.querySelector(".modal-img");
+      postImage.onclick = function () {
+        modal.style.display = "block";
+          modalImage.src = this.src;
+      }
+
+      modal.onclick = function() { 
+        modal.style.display = "none";
+      }
+    
+
+    
+          
+          
       
+
   } catch (error) {
     postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
     console.log(error);
