@@ -37,29 +37,29 @@ async function fetchPostDetails() {
       "text/html"
     );
     const txt = parsedDocumentTxt.querySelectorAll("p");
- 
+
       
         let newTxt = Array.from(txt)
       console.log(newTxt);
       
-      for (let i = 0; i < newTxt.length; i++){
-          console.log(newTxt[i].innerHTML);
           
           postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
         <p>${result.date}</p>
-        <p>Written by ${result.date}</p>
+        <p>Written by ${result.author}</p>
         <div class="post-image">
         <img src="${img.attributes.src.nodeValue}" alt="">
         </div>
         <div class="post-text">
-        <p>${newTxt[0].innerHTML}</p>
-        <p>${newTxt[1].innerHTML}</p>
-        <p>${newTxt[2].innerHTML}</p>
-        <p>${newTxt[3].innerHTML}</p>
         </div>
         `;
-      }
+      
+    const postT = document.querySelector(".post-text")
+      newTxt.forEach(function (blogPost) {
+          postT.innerHTML += `
+          <p>${blogPost.innerHTML}</p>
+          `;
+      });
       
   } catch (error) {
     postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
