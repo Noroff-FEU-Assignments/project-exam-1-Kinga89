@@ -44,7 +44,6 @@ async function fetchPostDetails() {
       
       for (let i = 0; i < newTxt.length; i++){
           console.log(newTxt[i].innerHTML);
-
           
           postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
@@ -55,12 +54,11 @@ async function fetchPostDetails() {
         </div>
         <div class="post-text">
         <p>${newTxt[0].innerHTML}</p>
+        <p>${newTxt[1].innerHTML}</p>
+        <p>${newTxt[2].innerHTML}</p>
+        <p>${newTxt[3].innerHTML}</p>
         </div>
         `;
-          
-          const textPost = document.querySelectorAll(".post-text");
-          textPost.innerHTML = newTxt[i].innerText;
-        console.log (textPost)
       }
       
   } catch (error) {
