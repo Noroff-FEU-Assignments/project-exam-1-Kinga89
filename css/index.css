@@ -135,7 +135,6 @@ video {
   text-align: left;
 }
 
-
 .card-image {
   background-size: cover;
   justify-content: center;
@@ -229,3 +228,40 @@ padding: 20px 50px;
   min-width: 20%;
 }
 
+
+/*MEDIA QUERIES*/
+
+/*responsive for mobile devices*/
+@media screen and (max-width: 810px) {
+.section1 {
+    padding: 0;
+}
+
+.section1 h1 {
+  font-size: 20px;
+}
+
+video {
+  margin-top: 0;
+}
+
+.hr-lines, .hr-lines2 {
+    margin: 10px 0;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.hr-lines:before, .hr-lines2:before{
+  display: none;
+}
+
+.hr-lines:after, .hr-lines2:after {
+  display: none;
+}
+
+
+
+
+
+
+}
