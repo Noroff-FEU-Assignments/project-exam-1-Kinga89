@@ -6,6 +6,15 @@ const baseURL =
 const sliderContainer = document.querySelector(".slider-container");
   document.title = "Home | Urban Planning Blog"
 
+  const hamburgerOpen = document.querySelector(".fa-bars");
+  const hamburgerClose = document.querySelector(".fa-times");
+const navMobile = document.querySelector("nav ul");
+
+import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+ 
+hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
+hamburgerClose.addEventListener("click", hamburgerMenuClose);
+
 async function fetchPosts() {
   try {
     const response = await fetch(baseURL);

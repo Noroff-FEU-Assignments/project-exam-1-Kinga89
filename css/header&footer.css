@@ -26,6 +26,11 @@
     position: fixed;
   }
   
+  .fa-bars,
+  .fa-times {
+    display: none;
+  }
+
   nav ul {
       list-style-type: none;
       display: flex;
@@ -35,7 +40,7 @@
   nav ul li {
     display: inline-block;
     padding: 30px;
-    margin-top: 3%;
+    margin-top: 2%;
     font-size: larger;
     font-weight: 500;
   }
@@ -81,4 +86,64 @@ footer{
     font-size: 25px;
   }
 
-  
+
+/*MEDIA QUERIES*/
+
+/*responsive for mobile devices*/
+
+/*======HEADER & FOOTER=========*/
+  @media screen and (max-width: 810px) {
+    .black-field,
+    .black-field i {
+      display: none;
+    }
+
+    header {
+      height: 100px;
+      background-color: black;
+      margin: 0 auto;
+    }
+
+    .fa-bars,
+    .fa-times {
+      display: inline-block;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      padding: 10px 10px 10px 20px;
+      cursor: pointer;
+      margin-top: 3%;
+    }
+
+    .fa-times {
+    display: none;
+    margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+       display: flex;
+       flex-direction: column; 
+       padding: 0;  
+       height: 300px;
+       display: none;
+    }
+    
+    nav ul li {
+      text-align: center;
+      border-bottom: white solid 1px;
+      background-color: black;
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    nav ul li:last-child {
+      border-bottom: none;
+    }
+
+    nav ul li a {
+      color: white;
+    }
+
+
+  }
