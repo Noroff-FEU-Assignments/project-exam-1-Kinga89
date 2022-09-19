@@ -147,6 +147,8 @@ max-height: 60vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
+    background-color:#E8E8E8;
+    padding: 20px;
 }
 
 .aboutme-text {

@@ -2,6 +2,17 @@ import { goBack } from "./utils.js";
 const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
+/* HAMBURGER MENU MOBILE*/
+const hamburgerOpen = document.querySelector(".fa-bars");
+const hamburgerClose = document.querySelector(".fa-times");
+const navMobile = document.querySelector("nav ul");
+
+import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+
+hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
+hamburgerClose.addEventListener("click", hamburgerMenuClose);
+
+
 const addMorePosts = "&per_page=15";
 const baseURL =
 "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;

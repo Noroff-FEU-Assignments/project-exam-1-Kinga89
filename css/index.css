@@ -75,8 +75,6 @@ video {
   margin-right: 10px;
 }
 
-
-
 .fa-arrow-left,
 .fa-arrow-right {
   font-size: 30px;
@@ -265,7 +263,10 @@ text-align: left;
 padding: 20px 30px;
 }
 
-
+.aboutme-section {
+background-color:#E8E8E8;
+padding: 20px;
+}
 
 .useful-resources-section {
   display: flex;
