@@ -260,8 +260,23 @@ video {
 }
 
 
+.aboutme-text {
+text-align: left;
+padding: 20px 30px;
+}
 
 
 
+.useful-resources-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.useful-resources-card,
+.useful-resources-card2,
+.useful-resources-card3 {
+  margin: 0;
+}
 
 }

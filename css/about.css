@@ -89,3 +89,99 @@ border-radius: 1%;
     text-decoration: none;
     color: black;
 }
+
+
+@media screen and (max-width: 810px) {
+.aboutpage-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.aboutpage-container h1,
+.about-author-container h2,
+.get-in-touch-container h3 {
+   font-size: 30px;
+   text-align: center;
+}
+
+
+.aboutpage-container p,
+.about-author-container p,
+.get-in-touch-container p {
+font-size: 16px;
+}
+.welcome-container{
+    max-height: 100vh;
+    padding: 0 5% 5%;
+    width: 90vw;
+    display: block;
+}
+
+.welcome-container img {
+   display: none;
+}
+
+.welcome-text {
+background-color:transparent;
+display: block;
+position: relative;
+padding: 0 10px;
+top: 0;
+opacity: 100%;
+border-radius: 0;
+max-width: 90%;
+margin: auto;
+max-height: 60vh;
+}
+
+.about-author-container h2 {
+    margin-top: 10px;
+}
+
+.about-author-container {
+     margin: 5% 0;
+}
+
+.aboutme-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.aboutme-text {
+    padding: 0 8% 5%;
+}
+
+.aboutme-image img {
+    max-height: 35vh;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.get-in-touch-container {
+    margin-bottom: 5%;
+}
+
+.get-in-touch-container h3 {
+    margin: 0 15%;
+}
+
+.get-in-touch-container p {
+    padding: 0 5%;
+}
+
+.get-in-touch-button {
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    margin: 7% auto;
+}
+
+.get-in-touch-button .fa-arrow-right {
+    padding-left: 7px;
+}
+
+
+}

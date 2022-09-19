@@ -13,6 +13,7 @@ html {
   h1, h2, h3 {
     font-family: "Playfair Display", serif;
     margin-top: 0;
+    font-size: 40px;
   }
   
   .background-main {
@@ -73,6 +74,10 @@ html {
       background-image: none;
       height: 100%;
     }
+
+    .fa-arrow-left {
+      margin-top: 20px;
+    }
     
     .spacer {
       height: 100px;
@@ -84,4 +89,12 @@ html {
       flex-direction: column;
       margin: 0;
     }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      margin-top: 0;
+      font-size: 30px;
+    }
+    
+
   }

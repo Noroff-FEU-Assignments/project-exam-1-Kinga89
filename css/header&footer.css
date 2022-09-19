@@ -144,4 +144,8 @@ footer{
     nav ul li a {
       color: white;
     }
+
+    footer h3 {
+      font-size: 20px;
+    }
   }
