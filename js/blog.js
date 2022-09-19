@@ -225,7 +225,7 @@ async function fetchPosts() {
 */
     /**************** ALL POSTS **********************/
       allPosts.innerHTML = "";
-      posts.forEach(function (blogPost) {
+    posts.forEach(function (blogPost) {
         allPosts.innerHTML += `
             <a href= /post.html?id=${blogPost.id}>
             <div class="blog-post">

@@ -131,8 +131,6 @@
     }
     
     .filter-posts {
-        flex: 90%;
-        position: relative;
         display: block;
         align-items: left;
     }
@@ -179,7 +177,4 @@
     .view-more-btn {
         margin: 30px auto;
     }
-
-
-
 }

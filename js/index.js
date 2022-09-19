@@ -1,7 +1,7 @@
 const addMorePosts = "&per_page=15";
 
 const baseURL =
-  "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
+  "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed=1&orderby=date&order=desc" + addMorePosts;
 
 const sliderContainer = document.querySelector(".slider-container");
   document.title = "Home | Urban Planning Blog"
@@ -24,8 +24,19 @@ async function fetchPosts() {
     sliderContainer.innerHTML = "";
   
 
+  
+
     /**************** ALL POSTS **********************/
     posts.forEach(function (blogPost) {
+  let initialDate = blogPost.date;
+    let formattedDate = new Date(initialDate).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit',
+      hour12: false
+    })
+    console.log(formattedDate)
+
       sliderContainer.innerHTML += `
              <div class=slider-carousel>
             <div class="slide">   
@@ -35,6 +46,7 @@ async function fetchPosts() {
                 </div>
                 <div class="card-text">
                 <h3>${blogPost.title.rendered}</h3>
+                <p>${formattedDate}</p>
                 <p>Author: ${blogPost._embedded.author[0].name}</p>
                 <p>${blogPost.excerpt.rendered}</p>
                 <p class="read-more-btn">Read more</p>

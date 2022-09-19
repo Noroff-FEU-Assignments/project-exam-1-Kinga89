@@ -2,6 +2,16 @@ import { goBack } from "./utils.js";
 const previousPage = document.querySelector(".fa-arrow-left");
 previousPage.addEventListener("click", goBack);
 
+/* HAMBURGER MENU MOBILE*/
+const hamburgerOpen = document.querySelector(".fa-bars");
+const hamburgerClose = document.querySelector(".fa-times");
+const navMobile = document.querySelector("nav ul");
+
+import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+
+hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
+hamburgerClose.addEventListener("click", hamburgerMenuClose);
+
 const postContainer = document.querySelector(".post-container");
 
 const queryString = document.location.search;
@@ -43,15 +53,23 @@ async function fetchPostDetails() {
 
     console.log(img.attributes.alt.nodeValue);
 
+    let initialDate = result.date;
+    let formattedDate = new Date(initialDate).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit',
+      hour12: false
+    })
+    console.log(formattedDate)
+
     postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>
-        <p>${result.date}</p>
-        <p>Written by ${result.author}</p>
+        <p>${formattedDate}</p>
         <div class="post-image">
         <img src="${img.attributes.src.nodeValue}" class="image" alt="${img.attributes.alt.nodeValue}">
         </div>
         <div class="modal">
-        <img src="${img.attributes.src.nodeValue}" class="modal-img" alt="">
+        <img src="${img.attributes.src.nodeValue}" class="modal-img" alt="${img.attributes.alt.nodeValue}">
         </div>
         <div class="post-text">
         </div>
