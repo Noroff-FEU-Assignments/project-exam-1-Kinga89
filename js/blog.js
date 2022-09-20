@@ -265,10 +265,10 @@ async function fetchPosts() {
       }
     };
 
-   
-    
-
-  } catch (error) {}
+  } catch (error) {
+    allPosts.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
+    console.log(error);
+  }
 }
 
 fetchPosts();

@@ -23,9 +23,6 @@ async function fetchPosts() {
     console.log(posts);
     sliderContainer.innerHTML = "";
   
-
-  
-
     /**************** ALL POSTS **********************/
     posts.forEach(function (blogPost) {
   let initialDate = blogPost.date;
@@ -58,12 +55,12 @@ async function fetchPosts() {
     });
 
     /**************** IMAGE SLIDER **********************/
-    let sliderCarousel = document.querySelectorAll(".slider-carousel");
+    const sliderCarousel = document.querySelectorAll(".slider-carousel");
     const arrowRight = document.querySelector(".fa-arrow-right");
     const arrowLeft = document.querySelector(".fa-arrow-left");
 
     let counter = 1;
-    const size = sliderCarousel[0].clientWidth;
+    const size = sliderCarousel[0].getBoundingClientRect().width;
 
     arrowRight.onclick = () => {
       sliderContainer.style.transition = "transform 0.5s ease-in-out";
@@ -81,9 +78,28 @@ async function fetchPosts() {
       console.log(counter);
     };
 
+   /* sliderCarousel.addEventListener("transitionend", function () {
+      if (counter === -1) {
+        sliderContainer.appendChild(sliderContainer.firstElementChild);
+      } else if (counter === 1) {
+        sliderContainer.prepend(sliderContainer.lastElementChild);
+      }
+      
+      sliderContainer.style.transition = "none";
+      sliderContainer.style.transform = "translate(0)";
+      setTimeout(function () {
+        sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
+      })
+      
+    })*/
 
 
-  } catch (error) {}
+
+  } catch (error) {
+    sliderContainer.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
+    console.log(error);
+
+  }
 }
 
 fetchPosts();

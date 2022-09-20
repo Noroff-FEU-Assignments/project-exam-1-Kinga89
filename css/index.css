@@ -60,12 +60,23 @@ video {
   background: black;
 }
 
-.section-latest-posts{
+.section2-home {
   display: flex;
   flex-direction: row;
 }
+.fa-arrow-left {
+  left: 0;
+}
 
-.section2-home {
+.fa-arrow-right {
+  right: 0;
+}
+
+.fa-arrow-left:hover,
+.fa-arrow-right:hover{
+  color: #FFDD00;
+}
+.latest-posts-container {
   overflow: hidden;
   flex: 1;  
   margin-bottom: 30px;
@@ -73,6 +84,7 @@ video {
   flex-direction: row;
   margin-left: 10px;
   margin-right: 10px;
+
 }
 
 .fa-arrow-left,
@@ -84,27 +96,14 @@ video {
   background-color: rgba(236, 236, 236, 0.902);
   border-radius: 50%;
   align-self: center;
-  
-}
-
-.fa-arrow-left {
-  left: 0;
-}
-
-
-.fa-arrow-right {
-  right: 0;
-}
-
-.fa-arrow-left:hover,
-.fa-arrow-right:hover{
-  color: #FFDD00;
 }
 
 .slider-container {
   display: flex;
   margin: auto;
   justify-content: center; 
+  margin: 0 auto;
+
 }
 
 .slider-carousel {
@@ -115,6 +114,7 @@ video {
   border-radius: 2%;
   margin: 20px;
   max-height: fit-content;
+
 }
 
 .slide {

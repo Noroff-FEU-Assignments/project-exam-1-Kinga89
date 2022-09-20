@@ -95,7 +95,7 @@ async function fetchPostDetails() {
       modal.style.display = "none";
     };
   } catch (error) {
-    postContainer.innerHTML = `<div id="error_msg">An error occured when calling the API </div>`;
+    postContainer.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
     console.log(error);
   }
 }
