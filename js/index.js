@@ -60,35 +60,49 @@ async function fetchPosts() {
     const arrowLeft = document.querySelector(".fa-arrow-left");
 
     let counter = 1;
-    const size = sliderCarousel[0].getBoundingClientRect().width;
+    const size = sliderCarousel[0].clientWidth;
 
     arrowRight.onclick = () => {
+      if (counter >= sliderCarousel.length - 1) return;
       sliderContainer.style.transition = "transform 0.5s ease-in-out";
       counter++;
-      sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
-
+      sliderContainer.style.transform = "translateX(" + (-size * counter) + "px)";
       console.log(counter);
     };
 
     arrowLeft.onclick = () => {
       sliderContainer.style.transition = "transform 0.5s ease-in-out";
       counter--;
-      sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
+      sliderContainer.style.transform = "translateX(" + (-size * counter) + "px)";
 
       console.log(counter);
     };
 
-   /* sliderCarousel.addEventListener("transitionend", function () {
-      if (counter === -1) {
-        sliderContainer.appendChild(sliderContainer.firstElementChild);
-      } else if (counter === 1) {
+    sliderContainer.addEventListener("transitionend", function () {
+      if (sliderCarousel[counter] ===  sliderContainer.prepend(sliderContainer.lastElementChild)) {
+        sliderContainer.style.transition = "none";
+        counter = sliderCarousel.length - 2;
+        sliderContainer.style.transform = "translateX(" + (-size * counter) + "px)";
+        sliderContainer.style.transition = "transform 1s ease-in-out";
+      }
+      if (sliderCarousel[counter] ===  sliderContainer.appendChild(sliderContainer.firstElementChild)) {
+        sliderContainer.style.transition = "none";
+        counter = sliderCarousel.length - counter;
+        sliderContainer.style.transform = "translateX(" + (-size * counter) + "px)";
+        sliderContainer.style.transition = "transform 1s ease-in-out";
+      }
+      
+      
+    });
+       
+       /*
+     else if (counter === 1) {
         sliderContainer.prepend(sliderContainer.lastElementChild);
       }
       
-      sliderContainer.style.transition = "none";
-      sliderContainer.style.transform = "translate(0)";
-      setTimeout(function () {
-        sliderContainer.style.transform = "translateX(" + -size * counter + "px)";
+     
+
+       
       })
       
     })*/

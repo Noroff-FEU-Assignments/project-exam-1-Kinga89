@@ -25,6 +25,13 @@
     box-shadow: 0 0 3px rgb(139, 139, 139);
     position: fixed;
   }
+
+  .nav-container p  {
+    display: inline;
+    font-size: 30px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+  }
   
   .fa-bars,
   .fa-times {

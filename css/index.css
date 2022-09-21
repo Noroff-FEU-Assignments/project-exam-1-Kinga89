@@ -85,7 +85,6 @@ video {
   flex-direction: row;
   margin-left: 10px;
   margin-right: 10px;
-
 }
 
 .fa-arrow-left,
@@ -104,7 +103,6 @@ video {
   margin: auto;
   justify-content: center; 
   margin: 0 auto;
-
 }
 
 .slider-carousel {
@@ -115,7 +113,6 @@ video {
   border-radius: 2%;
   margin: 20px;
   max-height: fit-content;
-
 }
 
 .slide {
@@ -177,6 +174,7 @@ padding: 20px 50px;
   display: flex;
   flex-direction: row;
   padding: 40px 40px 80px;
+  position: relative;
 }
 
 .useful-resources-card,
@@ -188,6 +186,9 @@ padding: 20px 50px;
   min-height: 30vh;
   margin: 0 10px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .useful-resources-card {
@@ -208,10 +209,17 @@ padding: 20px 50px;
   padding: 2% 10%;
   border-radius: 3%;
   position: absolute;
-  left: 35%;
   bottom: 10%;
   box-shadow: 0 0 2px rgb(139, 139, 139);
+  transform: scale(1);
+  transition: .3s ease-in-out;
 }
+
+.resources-title:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
 
 .resources-title p {
   font-weight: bold;
@@ -351,6 +359,27 @@ padding: 20px 30px;
 .useful-resources-card2,
 .useful-resources-card3 {
   margin: 0;
+}
+
+.resources-title:hover{
+  display: none;
+}
+
+}
+
+/*responsive for mobile devices*/
+@media screen and (min-width: 810px) and (max-width: 1105px) {
+  .hr-lines, .hr-lines2 {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.hr-lines:before, .hr-lines2:before{
+  display: none;
+}
+
+.hr-lines:after, .hr-lines2:after {
+  display: none;
 }
 
 }
