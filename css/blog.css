@@ -167,6 +167,7 @@ main h1 {
         padding: 5%;
         background-color: #E8E8E8;
         border-radius: 2%;
+        box-shadow: #353535 3px 3px 3px;
     }
     
     .blog-text {

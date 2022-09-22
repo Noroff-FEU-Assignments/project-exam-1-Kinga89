@@ -27,6 +27,49 @@ async function fetchPosts() {
 
     document.title = "Blog Posts | Urbs & Civitas"
 
+  /**************** ALL POSTS **********************/
+  allPosts.innerHTML = "";
+  posts.forEach(function (blogPost) {
+      allPosts.innerHTML += `
+          <a href= /post.html?id=${blogPost.id}>
+          <div class="blog-post">
+          <div class="blog-image">
+          <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
+          <div class="image-blogpost">
+              <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
+              </div>
+              </div>
+          
+          <div class="blog-text">
+              <h2>${blogPost.title.rendered}</h2>
+              <p>Published by: ${blogPost._embedded.author[0].name}</p>
+              <p>${blogPost.excerpt.rendered}</p>
+              <p class="read-more-post-btn">Read more</p>
+          </div>
+      </div>
+      </a>
+          `;
+    
+    });
+
+
+  /************************LOAD MORE POSTS**************************/
+  let loadMoreBtn = document.querySelector(".view-more-btn");
+  let currentAmount = 10;
+
+  loadMoreBtn.onclick = () => {
+    let boxes = document.querySelectorAll(".all-posts a");
+
+    for (let i = currentAmount; i < currentAmount + 3; i++) {
+      boxes[i].style.display = "flex";
+    }
+    currentAmount += 3;
+    if (currentAmount >= boxes.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  };
+
+
    /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
 
@@ -48,6 +91,7 @@ async function fetchPosts() {
     const radioBtn3 = document.querySelector("#radio-button3");
     const radioBtn4 = document.querySelector("#radio-button4");
     const radioBtn5 = document.querySelector("#radio-button5");
+  
 
     radioBtn1.addEventListener("change", () => {
       allPosts.innerHTML = "";
@@ -179,48 +223,7 @@ async function fetchPosts() {
         });
     
     
-    /**************** ALL POSTS **********************/
-    allPosts.innerHTML = "";
-    posts.forEach(function (blogPost) {
-        allPosts.innerHTML += `
-            <a href= /post.html?id=${blogPost.id}>
-            <div class="blog-post">
-            <div class="blog-image">
-            <div class="category-label">${blogPost._embedded["wp:term"][0][0].name}</div>
-            <div class="image-blogpost">
-                <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}">
-                </div>
-                </div>
-            
-            <div class="blog-text">
-                <h2>${blogPost.title.rendered}</h2>
-                <p>Published by: ${blogPost._embedded.author[0].name}</p>
-                <p>${blogPost.excerpt.rendered}</p>
-                <p class="read-more-post-btn">Read more</p>
-            </div>
-        </div>
-        </a>
-            `;
-      
-      });
-
-
-    /************************LOAD MORE POSTS**************************/
-    let loadMoreBtn = document.querySelector(".view-more-btn");
-    let currentAmount = 10;
-
-    loadMoreBtn.onclick = () => {
-      let boxes = document.querySelectorAll(".all-posts a");
-
-      for (let i = currentAmount; i < currentAmount + 3; i++) {
-        boxes[i].style.display = "flex";
-      }
-      currentAmount += 3;
-      if (currentAmount >= boxes.length) {
-        loadMoreBtn.style.display = "none";
-      }
-    };
-
+  
   } catch (error) {
     allPosts.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
     console.log(error);

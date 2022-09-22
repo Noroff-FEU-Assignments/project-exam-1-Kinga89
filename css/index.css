@@ -189,6 +189,8 @@ padding: 20px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: #353535 5px 5px 5px;
+  border-radius: 2%;
 }
 
 .useful-resources-card {
@@ -362,6 +364,8 @@ padding: 20px 30px;
 .useful-resources-card2,
 .useful-resources-card3 {
   margin: 0;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .resources-title:hover{
