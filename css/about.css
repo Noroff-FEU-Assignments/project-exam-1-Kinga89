@@ -93,7 +93,8 @@
 }
 
 @media screen and (max-width: 810px) {
-  .aboutpage-container {
+    .about-author-container,
+    .get-in-touch-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
@@ -102,11 +103,10 @@
   .aboutpage-container h1,
   .about-author-container h2,
   .get-in-touch-container h3 {
-    margin: 0 auto;
+    margin: auto;
     font-size: 30px;
     text-align: center;
   }
-
 
   .aboutpage-container p,
   .about-author-container p,

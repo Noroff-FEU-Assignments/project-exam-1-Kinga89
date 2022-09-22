@@ -7,7 +7,7 @@ const hamburgerOpen = document.querySelector(".fa-bars");
 const hamburgerClose = document.querySelector(".fa-times");
 const navMobile = document.querySelector("nav ul");
 
-import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+import { hamburgerMenuOpen, hamburgerMenuClose } from "./utils.js";
 
 hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
 hamburgerClose.addEventListener("click", hamburgerMenuClose);
@@ -29,7 +29,7 @@ async function fetchPostDetails() {
     const details = await fetch(detailsURL);
     const result = await details.json();
     console.log(result);
-    document.title = `${result.title.rendered}`;
+    document.title = `${result.title.rendered} | Urbs & Civitas`;
 
     const parser = new DOMParser();
     const content1 = result;
@@ -54,13 +54,13 @@ async function fetchPostDetails() {
     console.log(img.attributes.alt.nodeValue);
 
     let initialDate = result.date;
-    let formattedDate = new Date(initialDate).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: '2-digit',
-      hour12: false
-    })
-    console.log(formattedDate)
+    let formattedDate = new Date(initialDate).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+      hour12: false,
+    });
+    console.log(formattedDate);
 
     postContainer.innerHTML = `
         <h1>${result.title.rendered}</h1>

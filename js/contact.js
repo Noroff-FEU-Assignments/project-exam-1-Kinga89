@@ -32,7 +32,7 @@ const messageError = document.querySelector("#messageError");
 
 const sendButton = document.querySelector(".send-button");
 
-document.title = "Contact Me";
+document.title = "Contact Me | Urbs & Civitas";
 
 function validateForm(evt) {
  

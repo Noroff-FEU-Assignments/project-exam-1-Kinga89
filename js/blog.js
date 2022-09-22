@@ -25,7 +25,7 @@ async function fetchPosts() {
     const posts = await response.json();
     console.log(posts);
 
-    document.title = "Urbs & Civitas | Blog Posts"
+    document.title = "Blog Posts | Urbs & Civitas"
 
    /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
@@ -71,26 +71,7 @@ async function fetchPosts() {
         </div>
         </a>
             `;
-        
-  let loadMoreBtn = document.querySelector(".view-more-btn");
-    let currentAmount = 10;
-
-    loadMoreBtn.onclick = () => {
-      let boxes = document.querySelectorAll(".all-posts a");
-
-      for (let i = currentAmount; i < currentAmount + 3; i++) {
-        boxes[i].style.display = "flex";
-      }
-      currentAmount += 3;
-      if (currentAmount >= boxes.length) {
-        loadMoreBtn.style.display = "none";
-      }
-    };
-      
       });
-  
-
-
     });
 
 
@@ -116,8 +97,7 @@ async function fetchPosts() {
         </div>
         </a>
             `;
-    });
-      
+    });      
     })
 
     radioBtn3.addEventListener("change", () => {
@@ -142,9 +122,7 @@ async function fetchPosts() {
               </div>
           </div>
           </a>
-              `;
-     
-        
+              `;  
       })
       });
         
@@ -171,8 +149,6 @@ async function fetchPosts() {
             </div>
             </a>
                 `;
-       
-          
         })
       });
     
@@ -198,9 +174,7 @@ async function fetchPosts() {
                 </div>
             </div>
             </a>
-                `;
-       
-          
+                `;   
         })
         });
     

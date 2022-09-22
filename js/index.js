@@ -4,7 +4,7 @@ const baseURL =
   "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed=1&orderby=date&order=desc" + addMorePosts;
 
 const sliderContainer = document.querySelector(".slider-container");
-  document.title = "Home | Urban Planning Blog"
+  document.title = "Home | Urbs & Civitas"
 
 /* HAMBURGER MENU MOBILE*/
 const hamburgerOpen = document.querySelector(".fa-bars");
