@@ -1,262 +1,259 @@
 @import "../css/globalstyles.css";
 @import "../css/header&footer.css";
 
-
 .aboutpage-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 .aboutpage-container h1,
 .about-author-container h2,
 .get-in-touch-container h3 {
-    display: inline-block;
-    margin: 0 25%;
-   font-size: 40px;
-   padding-bottom: 20px;
-   font-family: "Quicksand", sans-serif;
+  display: inline-block;
+  margin: 0 25%;
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
 }
 
-.welcome-container{
-    max-height: 60vh;
-    padding: 5%;
-    position: relative;   
-    width: 90%;
+.about-author-container h2 {
+    margin-top: 5%;
+}
+
+.welcome-container {
+  max-height: 60vh;
+  padding: 5%;
+  position: relative;
+  width: 90%;
 }
 
 .welcome-container img {
-   margin-left: 40%;
-   border-radius: 1%;
-   width: 60%;
+  margin-left: 40%;
+  border-radius: 1%;
+  width: 60%;
 }
 
 .welcome-text {
-background-color:#E8E8E8;
-position: absolute;
-width: 40%;
-padding: 2%;
-top: 20%;
-opacity: 90%;
-border-radius: 1%;
+  background-color: #e8e8e8;
+  position: absolute;
+  width: 40%;
+  padding: 2%;
+  top: 20%;
+  opacity: 90%;
+  border-radius: 1%;
 }
 
-
 .about-author-container {
-     margin: 5% 0;
+  margin: 5% 0;
 }
 
 .aboutme-container {
-    display: flex;
+  display: flex;
 }
 
 .aboutme-text {
-    flex: 1;
-    padding: 3% 5%;
+  flex: 1;
+  padding: 3% 5%;
 }
 
 .aboutme-image {
-    flex: 1;
+  flex: 1;
 }
 
 .aboutme-image img {
-    max-height: 40vh;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
+  max-height: 40vh;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 .get-in-touch-container {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .get-in-touch-container p {
-    padding: 0 5%;
+  padding: 0 5%;
 }
 
 .get-in-touch-button {
-    width: max-content;
-    min-width: 10%;
-    margin: 3% 5%;
-    cursor: pointer;
+  width: max-content;
+  min-width: 10%;
+  margin: 3% 5%;
+  cursor: pointer;
 }
 
 .get-in-touch-button .fa-arrow-right {
-    padding-left: 7px;
+  padding-left: 7px;
 }
 
 .get-in-touch-button a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
-
 
 @media screen and (max-width: 810px) {
-    .aboutpage-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-    
-    .aboutpage-container h1,
-    .about-author-container h2,
-    .get-in-touch-container h3 {
-       font-size: 30px;
-       text-align: center;
-    }
-    
-    .aboutpage-container p,
-    .about-author-container p,
-    .get-in-touch-container p {
+  .aboutpage-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .aboutpage-container h1,
+  .about-author-container h2,
+  .get-in-touch-container h3 {
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+  .aboutpage-container p,
+  .about-author-container p,
+  .get-in-touch-container p {
     font-size: 16px;
     padding: 0 5%;
-    }
+  }
 
-    .welcome-container{
-        max-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-    
-    .welcome-container img {
-       display: none;
-    }
-    
-    .welcome-text {
-        background-color:transparent;
-        position: relative;
-        margin: 0 auto;
-        max-height: 60vh;
-        background-color: rgb(255, 0, 242);
-        top: 0;
-        opacity: 100%;
-        border-radius: 0;
-        width: 100%;
-    }
-.about-author-container h2 {
+  .welcome-container {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .welcome-container img {
+    display: none;
+  }
+
+  .welcome-text {
+    background-color: transparent;
+    position: relative;
+    margin: 0 auto;
+    max-height: 60vh;
+    padding: 0;
+    top: 0;
+    opacity: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+  .about-author-container h2 {
     margin-top: 10px;
-}
+  }
 
-.about-author-container {
-     margin: 5% 0;
-}
+  .about-author-container {
+    margin: 5% 0;
+  }
 
-.aboutme-container {
+  .aboutme-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
-    background-color:#E8E8E8;
+    background-color: #e8e8e8;
     padding: 20px;
-}
+  }
 
-.aboutme-text {
+  .aboutme-text {
     padding: 0 8% 5%;
-}
+  }
 
-.aboutme-image img {
+  .aboutme-image img {
     max-height: 35vh;
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-}
+  }
 
-.get-in-touch-container {
+  .get-in-touch-container {
     margin-bottom: 5%;
-}
+  }
 
-.get-in-touch-container h3 {
+  .get-in-touch-container h3 {
     margin: 0 15%;
-}
+  }
 
-.get-in-touch-container p {
+  .get-in-touch-container p {
     padding: 0 5%;
-}
+  }
 
-.get-in-touch-button {
+  .get-in-touch-button {
     display: flex;
     font-size: 12px;
     text-align: center;
     margin: 7% auto;
-}
+  }
 
-.get-in-touch-button .fa-arrow-right {
+  .get-in-touch-button .fa-arrow-right {
     padding-left: 7px;
-}
+  }
 }
 
 /*responsive for mobile devices*/
 @media screen and (min-width: 810px) and (max-width: 1105px) {
-    .aboutpage-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-    
-    .aboutpage-container h1,
-    .about-author-container h2,
-    .get-in-touch-container h3 {
-       font-size: 30px;
-       text-align: center;
-    }
-    
-    .aboutpage-container p,
-    .about-author-container p,
-    .get-in-touch-container p {
+  .aboutpage-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .aboutpage-container p,
+  .about-author-container p,
+  .get-in-touch-container p {
     font-size: 16px;
-    }
+  }
 
-    .welcome-container{
-        max-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-    
-    .welcome-container img {
-       display: none;
-    }
-    
-    .welcome-text {
-        background-color:transparent;
-        position: relative;
-        margin: 0 auto;
-        max-height: 60vh;
-        background-color: rgb(255, 0, 242);
-        top: 0;
-        opacity: 100%;
-        border-radius: 0;
-        width: 100%;
-    }
+  .welcome-container {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-    
-    .about-author-container h2 {
-        margin-top: 10px;
-        text-align: center;
-    }
-    
-    .about-author-container {
-         margin: 5% 0;
-    }
-    
-    .aboutme-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5%;
-        background-color:#E8E8E8;
-        padding: 20px;
-    }
-    
-    .aboutme-text {
-        padding: 0 8% 5%;
-    }
-    
-    .aboutme-image img {
-        max-height: 35vh;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto;
-    }
+  .welcome-container img {
+    display: none;
+  }
 
+  .welcome-text {
+    background-color: transparent;
+    position: relative;
+    margin: 0 auto;
+    max-height: 60vh;
+    top: 0;
+    opacity: 100%;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+  }
 
+  .welcome-text p {
+    width: 100%;
+  }
+
+  .about-author-container h2 {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .about-author-container {
+    margin: 5% 0;
+  }
+
+  .aboutme-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    background-color: #e8e8e8;
+    padding: 20px;
+  }
+
+  .aboutme-text {
+    padding: 0 8% 5%;
+  }
+
+  .aboutme-image img {
+    max-height: 35vh;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 }

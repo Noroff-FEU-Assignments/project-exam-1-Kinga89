@@ -15,6 +15,7 @@
     padding: 10px;
     padding-right: 50px;
   }
+
   header {
     font-family: "Quicksand", sans-serif;
     top: 0;
@@ -25,12 +26,9 @@
     box-shadow: 0 0 3px rgb(139, 139, 139);
     position: fixed;
   }
-
-  .nav-container p  {
-    display: inline;
-    font-size: 30px;
-    color: white;
-    font-family: "Quicksand", sans-serif;
+  
+  .nav-container p {
+    display: none;
   }
   
   .fa-bars,
@@ -42,14 +40,15 @@
       list-style-type: none;
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
   }
   
   nav ul li {
     display: inline-block;
     padding: 30px;
-    margin-top: 2%;
     font-size: larger;
     font-weight: 500;
+    margin-top: 2%;
   }
   
   nav ul li a {
@@ -111,6 +110,13 @@ footer{
       margin: 0 auto;
     }
 
+    .nav-container p  {
+      display: inline;
+      font-size: 30px;
+      color: white;
+      font-family: "Quicksand", sans-serif;
+    }
+
     .fa-bars,
     .fa-times {
       display: inline-block;
@@ -142,6 +148,7 @@ footer{
       background-color: black;
       font-size: 16px;
       margin-top: 0;
+      width: 100%;
     }
 
     nav ul li:last-child {

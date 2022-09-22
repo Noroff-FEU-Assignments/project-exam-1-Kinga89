@@ -71,8 +71,26 @@ async function fetchPosts() {
         </div>
         </a>
             `;
+        
+  let loadMoreBtn = document.querySelector(".view-more-btn");
+    let currentAmount = 10;
+
+    loadMoreBtn.onclick = () => {
+      let boxes = document.querySelectorAll(".all-posts a");
+
+      for (let i = currentAmount; i < currentAmount + 3; i++) {
+        boxes[i].style.display = "flex";
+      }
+      currentAmount += 3;
+      if (currentAmount >= boxes.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    };
       
       });
+  
+
+
     });
 
 
@@ -187,44 +205,8 @@ async function fetchPosts() {
         });
     
     
-    /*
-     radioBtns.forEach (function (filterBtn) {
-       filterBtn.addEventListener("change", function () {
-          for (let i = 0; i < filterBtn.length; i++) {
-            filterBtn[i].classList.remove("checked");
-         }
-         this.classList.add("checked");
-         
-          let blogBox = this.getAttribute("value");
-         console.log(blogBox);
-         
-          if (blogBox === "All") {
-            console.log(posts);
-          }
-
-          if (blogBox === "Transport") {
-            console.log(transport);
-          }
-
-          if (blogBox === "Architecture") {
-            console.log(architecture);
-          }
-
-          if (blogBox === "Urban Design") {
-            console.log(urbanDesign);
-          }
-
-          if (blogBox === "City Planning") {
-            console.log(cityPlanning);
-          }
-        });
-      });
-
-    
-    
-*/
     /**************** ALL POSTS **********************/
-      allPosts.innerHTML = "";
+    allPosts.innerHTML = "";
     posts.forEach(function (blogPost) {
         allPosts.innerHTML += `
             <a href= /post.html?id=${blogPost.id}>
