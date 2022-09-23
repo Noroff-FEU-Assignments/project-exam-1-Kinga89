@@ -1,129 +1,138 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family:  "Quicksand", sans-serif, "Playfair Display", serif, Verdana, Tahoma, sans-serif;
-    margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif, "Playfair Display", serif, Verdana, Tahoma, sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin-top: 0;
+}
+
+.background-main {
+  background-image: url(../images/toluca.jpg);
+  background-repeat: repeat;
+  object-position: top;
+  background-size: cover;
+  height: 100%;
+}
+
+.spacer {
+  height: 200px;
+}
+
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.fa-arrow-left {
+  left: 0;
+  display: inline-block;
+  font-size: 30px;
+  padding-left: 5%;
+}
+
+.fa-arrow-left:hover {
+  cursor: pointer;
+}
+
+.cta-button {
+  background-color: #FFDD00;
+  color: black;
+  font-weight: bold;
+  display: inline;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  text-align: center;
+  width: 120px;
+  box-shadow: 0 0 3px black;
+}
+
+.small-button {
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  text-align: center;
+  width: 80px;
+  box-shadow: 0 0 3px black;
+}
+
+.cta-button:hover {
+  background-color: white;
+}
+
+.center-loader {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 25%;
+  padding-bottom: 10%;
+}
+
+.error_msg {
+  border: 20px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 20px solid #FFDD00;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
 
-  h1, h2, h3 {
-    font-family: "Playfair Display", serif;
-    margin-top: 0;
+  100% {
+    transform: rotate(360deg);
   }
-  
+}
+
+
+@media screen and (max-width: 810px) {
   .background-main {
-    background-image: url(../images/toluca.jpg);
-    background-repeat: repeat;
-    object-position: top;
-    background-size: cover;
+    background-image: none;
     height: 100%;
   }
-  
+
+  .fa-arrow-left {
+    margin-top: 20px;
+  }
+
   .spacer {
-    height: 200px;
-    }
+    height: 100px;
+  }
 
   main {
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
-    position: relative;
-    min-height: 100vh;
+    margin: 0;
   }
 
-  .fa-arrow-left {
-    left: 0;
-    display: inline-block;
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+    margin-top: 0;
     font-size: 30px;
-    padding-left: 5%;
-  }
-
-  .fa-arrow-left:hover {
-    cursor: pointer;
-  }
-
-  .cta-button {
-    background-color: #FFDD00;
-    color: black;
-    font-weight: bold;
-    display: inline;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-    text-align: center;
-    width: 120px;
-    box-shadow: 0 0 3px black;
-  }
-
-  .small-button {
-    padding: 10px 20px 10px 20px;
-    font-size: 15px;
-    text-align: center;
-    width: 80px;
-    box-shadow: 0 0 3px black;
-  }
-
-  .cta-button:hover {
-    background-color: white;
-  }
-
-  .center-loader {
-    display: flex;
-    flex-direction: column;
-    margin: 5% 25%;
-    padding-bottom: 10%;
   }
 
   .error_msg {
-    border: 20px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 20px solid #FFDD00;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #FFDD00;
+    width: 90px;
+    height: 90px;
   }
 
-
-  @media screen and (max-width: 810px) {
-    .background-main {
-      background-image: none;
-      height: 100%;
-    }
-
-    .fa-arrow-left {
-      margin-top: 20px;
-    }
-    
-    .spacer {
-      height: 100px;
-      }
-  
-    main {
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-    }
-
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      margin-top: 0;
-      font-size: 30px;
-    }
-    
-    .error_msg {
-      border: 16px solid #f3f3f3;
-      border-top: 16px solid #FFDD00;
-      width: 90px;
-      height: 90px;
-    }
-
-  }
+}

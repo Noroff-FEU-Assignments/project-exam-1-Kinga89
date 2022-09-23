@@ -27,7 +27,7 @@ main h1 {
     margin-left: 3%;
 }
 
-.filter-posts label{
+.filter-posts label {
     align-self: center;
     padding-left: 5%;
 }
@@ -55,19 +55,32 @@ main h1 {
 .all-posts a:nth-child(3) {
     display: flex;
 }
+
 .all-posts a:nth-child(4) {
     display: flex;
-}.all-posts a:nth-child(5) {
+}
+
+.all-posts a:nth-child(5) {
     display: flex;
-}.all-posts a:nth-child(6) {
+}
+
+.all-posts a:nth-child(6) {
     display: flex;
-}.all-posts a:nth-child(7) {
+}
+
+.all-posts a:nth-child(7) {
     display: flex;
-}.all-posts a:nth-child(8) {
+}
+
+.all-posts a:nth-child(8) {
     display: flex;
-}.all-posts a:nth-child(9) {
+}
+
+.all-posts a:nth-child(9) {
     display: flex;
-}.all-posts a:nth-child(10) {
+}
+
+.all-posts a:nth-child(10) {
     display: flex;
 }
 
@@ -86,8 +99,8 @@ main h1 {
     position: relative;
 }
 
-.image-blogpost > img {
-   max-height: 100%;
+.image-blogpost>img {
+    max-height: 100%;
     max-width: 100%;
 }
 
@@ -127,7 +140,7 @@ main h1 {
 .view-more-btn {
     margin: 50px auto;
     display: block;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -135,23 +148,23 @@ main h1 {
     main h1 {
         font-size: 30px;
     }
-    
+
     .filter-container {
         display: flex;
         flex-direction: column;
         padding: 0 20px;
     }
-    
+
     .filter-posts {
         display: block;
         align-items: left;
     }
-    
+
     .filter-posts p {
-       display: none;
+        display: none;
     }
-    
-    .filter-posts label{
+
+    .filter-posts label {
         padding-left: 5%;
     }
 
@@ -159,7 +172,7 @@ main h1 {
         display: inline-block;
         margin: 1%;
     }
-    
+
     .blog-post {
         display: flex;
         flex-direction: column;
@@ -169,11 +182,11 @@ main h1 {
         border-radius: 2%;
         box-shadow: #353535 3px 3px 3px;
     }
-    
+
     .blog-text {
         padding-left: 0;
     }
-    
+
     .blog-text h2 {
         color: black;
         margin: 0;
@@ -184,7 +197,7 @@ main h1 {
     .blog-text p {
         font-size: 15px;
     }
-    
+
     .view-more-btn {
         margin: 30px auto;
     }

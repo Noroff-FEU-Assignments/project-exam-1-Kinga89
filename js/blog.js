@@ -7,7 +7,7 @@ const hamburgerOpen = document.querySelector(".fa-bars");
 const hamburgerClose = document.querySelector(".fa-times");
 const navMobile = document.querySelector("nav ul");
 
-import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+import { hamburgerMenuOpen, hamburgerMenuClose } from "./utils.js";
 
 hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
 hamburgerClose.addEventListener("click", hamburgerMenuClose);
@@ -15,7 +15,7 @@ hamburgerClose.addEventListener("click", hamburgerMenuClose);
 
 const addMorePosts = "&per_page=15";
 const baseURL =
-"https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
+  "https://blog.kingakot.com/wp-json/wp/v2/posts?_embed" + addMorePosts;
 
 const allPosts = document.querySelector(".all-posts");
 
@@ -27,9 +27,9 @@ async function fetchPosts() {
 
     document.title = "Blog Posts | Urbs & Civitas"
 
-  /**************** ALL POSTS **********************/
-  allPosts.innerHTML = "";
-  posts.forEach(function (blogPost) {
+    /**************** ALL POSTS **********************/
+    allPosts.innerHTML = "";
+    posts.forEach(function (blogPost) {
       allPosts.innerHTML += `
           <a href= /post.html?id=${blogPost.id}>
           <div class="blog-post">
@@ -49,28 +49,28 @@ async function fetchPosts() {
       </div>
       </a>
           `;
-    
+
     });
 
 
-  /************************LOAD MORE POSTS**************************/
-  let loadMoreBtn = document.querySelector(".view-more-btn");
-  let currentAmount = 10;
+    /************************LOAD MORE POSTS**************************/
+    let loadMoreBtn = document.querySelector(".view-more-btn");
+    let currentAmount = 10;
 
-  loadMoreBtn.onclick = () => {
-    let boxes = document.querySelectorAll(".all-posts a");
+    loadMoreBtn.onclick = () => {
+      let boxes = document.querySelectorAll(".all-posts a");
 
-    for (let i = currentAmount; i < currentAmount + 3; i++) {
-      boxes[i].style.display = "flex";
-    }
-    currentAmount += 3;
-    if (currentAmount >= boxes.length) {
-      loadMoreBtn.style.display = "none";
-    }
-  };
+      for (let i = currentAmount; i < currentAmount + 3; i++) {
+        boxes[i].style.display = "flex";
+      }
+      currentAmount += 3;
+      if (currentAmount >= boxes.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    };
 
 
-   /*-------------------------FILTER--------------------------*/
+    /*-------------------------FILTER--------------------------*/
     const radioBtns = document.querySelectorAll("#radio-button");
 
     const transport = posts.filter(
@@ -85,13 +85,13 @@ async function fetchPosts() {
     const cityPlanning = posts.filter(
       (post) => post._embedded["wp:term"][0][0].name === "City Planning"
     );
-  
+
     const radioBtn1 = document.querySelector("#radio-button1");
     const radioBtn2 = document.querySelector("#radio-button2");
     const radioBtn3 = document.querySelector("#radio-button3");
     const radioBtn4 = document.querySelector("#radio-button4");
     const radioBtn5 = document.querySelector("#radio-button5");
-  
+
 
     radioBtn1.addEventListener("change", () => {
       allPosts.innerHTML = "";
@@ -119,10 +119,10 @@ async function fetchPosts() {
     });
 
     radioBtn2.addEventListener("change", () => {
-    loadMoreBtn.style.display = "none";
-    allPosts.innerHTML = "";
-    transport.forEach(function (blogPost) {
-      allPosts.innerHTML += `
+      loadMoreBtn.style.display = "none";
+      allPosts.innerHTML = "";
+      transport.forEach(function (blogPost) {
+        allPosts.innerHTML += `
             <a href= /post.html?id=${blogPost.id}>
             <div class="blog-post">
             <div class="blog-image">
@@ -140,7 +140,7 @@ async function fetchPosts() {
         </div>
         </a>
             `;
-    });      
+      });
     })
 
     radioBtn3.addEventListener("change", () => {
@@ -165,15 +165,15 @@ async function fetchPosts() {
               </div>
           </div>
           </a>
-              `;  
+              `;
       })
-      });
-        
+    });
+
     radioBtn4.addEventListener("change", () => {
       loadMoreBtn.style.display = "none";
-        allPosts.innerHTML = "";
-        urbanDesign.forEach(function (blogPost) {
-          allPosts.innerHTML += `
+      allPosts.innerHTML = "";
+      urbanDesign.forEach(function (blogPost) {
+        allPosts.innerHTML += `
                 <a href= /post.html?id=${blogPost.id}>
                 <div class="blog-post">
                 <div class="blog-image">
@@ -192,14 +192,14 @@ async function fetchPosts() {
             </div>
             </a>
                 `;
-        })
-      });
-    
+      })
+    });
+
     radioBtn5.addEventListener("change", () => {
       loadMoreBtn.style.display = "none";
-        allPosts.innerHTML = "";
-        cityPlanning.forEach(function (blogPost) {
-          allPosts.innerHTML += `
+      allPosts.innerHTML = "";
+      cityPlanning.forEach(function (blogPost) {
+        allPosts.innerHTML += `
                 <a href= /post.html?id=${blogPost.id}>
                 <div class="blog-post">
                 <div class="blog-image">
@@ -217,12 +217,10 @@ async function fetchPosts() {
                 </div>
             </div>
             </a>
-                `;   
-        })
-        });
-    
-    
-  
+                `;
+      })
+    });
+
   } catch (error) {
     allPosts.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
     console.log(error);

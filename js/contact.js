@@ -7,7 +7,7 @@ const hamburgerOpen = document.querySelector(".fa-bars");
 const hamburgerClose = document.querySelector(".fa-times");
 const navMobile = document.querySelector("nav ul");
 
-import { hamburgerMenuOpen,hamburgerMenuClose } from "./utils.js";
+import { hamburgerMenuOpen, hamburgerMenuClose } from "./utils.js";
 
 hamburgerOpen.addEventListener("click", hamburgerMenuOpen);
 hamburgerClose.addEventListener("click", hamburgerMenuClose);
@@ -35,8 +35,8 @@ const sendButton = document.querySelector(".send-button");
 document.title = "Contact Me | Urbs & Civitas";
 
 function validateForm(evt) {
- 
-    evt.preventDefault();
+
+  evt.preventDefault();
   /*Checks if the name has more than 5 characters*/
   if (checkLength(name.value, 5) === true) {
     nameError.style.display = "none";
@@ -77,9 +77,8 @@ function validateForm(evt) {
     checkLength(name.value, 5) &&
     validateEmail(email.value) &&
     checkLength(subject.value, 15) &&
-    checkLength(message.value, 25);     
+    checkLength(message.value, 25);
 }
-
 
 
 console.log(name.value);
