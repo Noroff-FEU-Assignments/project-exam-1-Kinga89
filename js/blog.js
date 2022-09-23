@@ -118,7 +118,6 @@ async function fetchPosts() {
       });
     });
 
-
     radioBtn2.addEventListener("change", () => {
     loadMoreBtn.style.display = "none";
     allPosts.innerHTML = "";

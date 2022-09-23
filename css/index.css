@@ -9,6 +9,7 @@
     margin-top: 0;
     padding: 0 5%;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .section1 h1 {
@@ -113,6 +114,9 @@ video {
   border-radius: 2%;
   margin: 20px;
   max-height: fit-content;
+  background-color: #e8e8e84a;
+  border-radius: 2%;
+  box-shadow: #353535 2px 2px 3px;
 }
 
 .slide {
@@ -222,7 +226,6 @@ padding: 20px 50px;
   cursor: pointer;
 }
 
-
 .resources-title p {
   font-weight: bold;
   margin: 5%;
@@ -274,6 +277,7 @@ video {
 
 .fa-arrow-left {
   left: 0;
+  margin-top: 0;
 }
 
 .fa-arrow-right {
@@ -282,14 +286,13 @@ video {
 
 .latest-posts-container {
   margin: 0 0 30px 0;
-
 }
 
 .fa-arrow-left,
 .fa-arrow-right {
   font-size: 30px;
   padding: 10px;
-  align-self: center;
+  align-content: center;
 }
 
 .slider-container {
@@ -300,10 +303,13 @@ video {
 
 .slider-carousel {
   box-shadow: none;
-  padding: 3px;
+  padding: 5px;
   width: 100%;
   margin: 0;
   max-height: fit-content;
+  background-color: white; 
+  border-radius: 2%;
+  box-shadow: none;
 }
 
 .slide {
@@ -374,7 +380,8 @@ padding: 20px 30px;
 
 }
 
-/*responsive for mobile devices*/
+/********** Responsive for TABLET/IPAD *******/
+
 @media screen and (min-width: 810px) and (max-width: 1105px) {
   .hr-lines, .hr-lines2 {
     padding: 20px;
