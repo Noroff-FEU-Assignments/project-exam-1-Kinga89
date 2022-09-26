@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="https://kit.fontawesome.com/91f98c5a03.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -9,111 +8,103 @@
     <meta name="description" content="Welcome to my blog" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet" />
-    <!-- Hotjar Tracking Code for https://papaya-crumble-7da5a5.netlify.app/ -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 3170689, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+<link href="css/index.css" rel="stylesheet" />
+<!-- Hotjar Tracking Code for https://papaya-crumble-7da5a5.netlify.app/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3170689,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </head>
-
 <body>
+    <div class="page-loader"> <div class="error_msg"></div></div>
     <header>
         <div class="black-field">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-youtube"></i>
-            <i class="fa fa-twitter"></i>
-        </div>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-youtube"></i>
+      <i class="fa fa-twitter"></i>
+  </div>
+ 
+  <div class="nav-container">
+    <label for="hamburger-menu"><i class="fas fa-bars"></i><p>MENU</p></label>
+    <label for="close-menu-mobile"><i class="fas fa-times"></i></label>
+<nav aria-labelledby="primary-navigation">
+<ul>
+  <li class="current"><a href="index.html">HOME</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+  </div>
+  </header>
+ 
+  <div class="background-main">
+    <main>
+        <div class="spacer"></div>
+        <section class="section1">
+            <h1>Welcome to Urbs & Civitas - blog about urban planning</h1>
+       <video src="../videos/City - 335.mp4" autoplay loop muted></video>
+    </section>
+        <h2 class="hr-lines">LATEST POSTS</h2>
+<section class="section2-home">   
+    <i class="fas fa-arrow-left"></i>
+    <div class="latest-posts-container">
+    <div class="slider-container">
 
-        <div class="nav-container">
-            <label for="hamburger-menu"><i class="fas fa-bars"></i>
-                <p>MENU</p>
-            </label>
-            <label for="close-menu-mobile"><i class="fas fa-times"></i></label>
-            <nav aria-labelledby="primary-navigation">
-                <ul>
-                    <li class="current"><a href="index.html">HOME</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="background-main">
-        <main>
-            <div class="spacer"></div>
-            <section class="section1">
-                <h1>Welcome to Urbs & Civitas - blog about urban planning</h1>
-                <video src="../videos/City - 335.mp4" autoplay loop muted></video>
-            </section>
-            <h2 class="hr-lines">LATEST POSTS</h2>
-            <section class="section2-home">
-                <i class="fas fa-arrow-left"></i>
-                <div class="latest-posts-container">
-                    <div class="slider-container">
-
-                    </div>
-                </div>
-
-                <i class="fas fa-arrow-right"></i>
-
-            </section>
-            <section class="aboutme-section">
-                <h2 class="hr-lines">ABOUT ME</h2>
-                <div class="aboutme-image">
-                    <img src="../images/26962083_1965351833479527_8633034260278908765_o.jpg" alt="">
-                </div>
-                <p class="aboutme-text">Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side
-                    når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal
-                    fordeling av bokstaver i ord, i motsetning til ‘Innhold her, innhold her’, og gir inntrykk av å være
-                    lesbar tekst. </p>
-            </section>
-            <h2 class="hr-lines2">USEFUL RESOURCES</h2>
-            <section class="useful-resources-section">
-                <div class="useful-resources-card">
-                    <div class="resources-title">
-                        <p><a href="#">PODCASTS</a></p>
-                    </div>
-                </div>
-                <div class="useful-resources-card2">
-                    <div class="resources-title">
-                        <p><a href="#">BOOKS</a></p>
-                    </div>
-                </div>
-                <div class="useful-resources-card3">
-                    <div class="resources-title">
-                        <p><a href="#">COURSES</a></p>
-                    </div>
-                </div>
-            </section>
-        </main>
     </div>
-    <footer>
-        <h3>Follow me</h3>
-        <div class="footer-container">
-            <div class="icons-footer">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-youtube"></i>
-                <i class="fa fa-twitter"></i>
-                <p>&copy; 2022 Kinga Kot</p>
-            </div>
+</div>
+  
+<i class="fas fa-arrow-right"></i>
+  
+</section>
+<section class="aboutme-section">
+    <h2 class="hr-lines">ABOUT ME</h2>
+    <div class="aboutme-image">
+       <img src="../images/26962083_1965351833479527_8633034260278908765_o.jpg" alt=""> 
+    </div>
+     <p class="aboutme-text">Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til ‘Innhold her, innhold her’, og gir inntrykk av å være lesbar tekst. </p>
+</section>
+ <h2 class="hr-lines2">USEFUL RESOURCES</h2>
+<section class="useful-resources-section">
+    <div class="useful-resources-card">
+        <div class="resources-title">
+            <p><a href="#">PODCASTS</a></p>
         </div>
-    </footer>
-    <script src="js/index.js" type="module"></script>
+    </div>
+    <div class="useful-resources-card2">
+        <div class="resources-title">
+            <p><a href="#">BOOKS</a></p>
+        </div>
+    </div>
+    <div class="useful-resources-card3">
+        <div class="resources-title">
+            <p><a href="#">COURSES</a></p>
+        </div>
+    </div>
+</section>
+    </main>
+</div>
+<footer>
+    <h3>Follow me</h3>
+    <div class="footer-container">
+<div class="icons-footer">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-youtube"></i>
+    <i class="fa fa-twitter"></i>
+    <p>&copy; 2022 Kinga Kot</p>
+</div>
+    </div>
+</footer>
+<script src="js/index.js" type="module"></script>
 </body>
-
 </html>

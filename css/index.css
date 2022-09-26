@@ -25,7 +25,7 @@
 video {
   object-fit: cover;
   object-position: center;
-  height: 100%;
+  max-height: 60vh;
   width: 100%;
 }
 

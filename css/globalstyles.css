@@ -98,6 +98,13 @@ main {
   }
 }
 
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  margin: 20% 40%;
+  padding-bottom: 50%;
+}
+
 
 @media screen and (max-width: 810px) {
   .background-main {
@@ -134,5 +141,14 @@ main {
     width: 90px;
     height: 90px;
   }
+
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30%;
+}
 
 }

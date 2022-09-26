@@ -1,3 +1,8 @@
+const loader = document.querySelector(".page-loader")
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+})
+
 const addMorePosts = "&per_page=15";
 
 const baseURL =
@@ -5,6 +10,8 @@ const baseURL =
 
 const sliderContainer = document.querySelector(".slider-container");
 document.title = "Home | Urbs & Civitas"
+
+
 
 /* HAMBURGER MENU MOBILE*/
 const hamburgerOpen = document.querySelector(".fa-bars");
@@ -92,7 +99,6 @@ async function fetchPosts() {
         sliderContainer.style.transition = "transform 1s ease-in-out";
       }
     });
-
 
   } catch (error) {
     sliderContainer.innerHTML = `<div class="center-loader"> <div class="error_msg"></div></div>`;
