@@ -11,8 +11,6 @@ const baseURL =
 const sliderContainer = document.querySelector(".slider-container");
 document.title = "Home | Urbs & Civitas"
 
-
-
 /* HAMBURGER MENU MOBILE*/
 const hamburgerOpen = document.querySelector(".fa-bars");
 const hamburgerClose = document.querySelector(".fa-times");
