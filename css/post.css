@@ -35,7 +35,7 @@
     height: 100%;
     overflow: auto;
     background-color: black;
-    cursor: pointer;
+    cursor: zoom-out;
 }
 
 .modal-img {

@@ -87,6 +87,8 @@ async function fetchPostDetails() {
           `;
     });
 
+
+    /************************ IMAGE MODAL ************************/
     const modal = document.querySelector(".modal");
 
     const postImage = document.querySelector(".post-image img");
