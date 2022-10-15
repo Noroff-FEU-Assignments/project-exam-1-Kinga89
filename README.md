@@ -1,6 +1,6 @@
-# Kinga Kot | Blog
+# Blog
 
-This is my portoflio containg all the projects I have built during my first year of front-end development study.
+Blog site built for the project exam. Theme for the blog is architecture and urban planning.
 
 <div id="images">
 <img src="images/blog.png" width="400" height="200"/>
@@ -9,7 +9,7 @@ This is my portoflio containg all the projects I have built during my first year
 
 ## Description
 
-Blog site that´s built for the project exam. The goal was to put into practice all the skills I have learned during the first year of frontend development study. Theme for the blog I chose is architecture and urban planning. Blog posts are created and stored in Wordpress used as a Headless CMS and then fetched data are displayed on the website. Blog specific page is created dynamically with the use of query string parameter.
+Blog site that´s built for the project exam. The goal was to put into practice all the skills I have learned during the first year of frontend development study. Blog posts are created and stored in Wordpress used as a Headless CMS and then fetched data are displayed on the website. Blog specific page is created dynamically with the use of query string parameter.
 
 ### Site architecture
 
