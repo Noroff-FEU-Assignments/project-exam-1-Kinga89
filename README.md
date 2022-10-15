@@ -9,7 +9,7 @@ Blog site built for the project exam. Theme for the blog is architecture and urb
 
 ## Description
 
-Blog site that´s built for the project exam. The goal was to put into practice all the skills I have learned during the first year of frontend development study. Blog posts are created and stored in Wordpress used as a Headless CMS and then fetched data are displayed on the website. Blog specific page is created dynamically with the use of query string parameter.
+Blog site that´s built for the project exam. The goal was to put into practice all the skills I had learned during the first year of frontend development study. Blog posts are created and stored in Wordpress used as a Headless CMS and then fetched data are displayed on the website. Blog specific page is created dynamically with the use of query string parameter.
 
 ### Site architecture
 
